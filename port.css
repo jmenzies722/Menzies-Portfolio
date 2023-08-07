@@ -47,18 +47,18 @@ body {
     
     .hero-description {
         font-size: 18px; /* Increase font size */
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         grid-column: 2;
         text-align: center; /* Center alignment of text */
         max-width: 800px; /* Limiting width to enhance readability */
-        line-height: 1.6; /* Improving readability with increased line height */
+        line-height: 1.8; /* Improving readability with increased line height */
     }
     
     .hero-image img {
         object-fit: cover;
-        width: 300px; /* Increase image size */
-        height: 300px; /* Increase image size */
-        border-radius: 10%; /* Increased border-radius */
+        width: 500px; /* Increase image size */
+        height: 475px; /* Increase image size */
+        border-radius: 5%; /* Increased border-radius */
         grid-column: 5;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -202,7 +202,7 @@ body {
 }
 
 .education-item {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.137);
     padding: 20px;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -497,3 +497,49 @@ body {
     color: #aeaeae; /* Changes the color of the text on hover */
   }
   
+  @media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px 10px;
+        width: 90%;
+    }
+
+    .hero {
+        height: auto;
+        padding: 100px 20px 50px;  /* Increased top padding */
+    }
+
+    .hero-title {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 2px 0;
+    }
+
+    .brand, .nav-link, .nav a {
+        margin-bottom: 10px;  /* Reduced margin */
+    }
+
+    .nav-link, .nav a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
