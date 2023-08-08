@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   title.textContent = '';  // Start with an empty title
   title.classList.add('blinking');  // Start with blinking cursor
   
-  const intro = 'Welcome 👋';
+  const intro = 'Welcome Everyone 👋';
   const name = 'DOSE OF JOSH';
   let index = 0;
   let currentText = intro;
@@ -127,3 +127,4 @@ function elementInView(el, visibilityThreshold = 1) {
     return (rect.top <= (window.innerHeight || document.documentElement.clientHeight) * visibilityThreshold) &&
            ((rect.top + rect.height) >= 0);
 }
+
