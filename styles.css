@@ -70,13 +70,29 @@ body {
     
     
     .hero-description {
+        opacity: 0;  /* Start hidden */
         font-size: 18px; /* Increase font size */
         margin-bottom: 40px;
         grid-column: 2;
         text-align: center; /* Center alignment of text */
         max-width: 800px; /* Limiting width to enhance readability */
         line-height: 1.8; /* Improving readability with increased line height */
+        animation: fadeInUp 1.5s forwards 0.5s;  /* Start the animation after 0.5s delay */
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  /* Ease-in-out */
     }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+
     
     .hero-image img {
         object-fit: cover;

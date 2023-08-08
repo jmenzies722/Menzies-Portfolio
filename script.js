@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   title.textContent = '';  // Start with an empty title
   title.classList.add('blinking');  // Start with blinking cursor
   
-  const intro = 'Welcome';
+  const intro = 'Welcome 👋';
   const name = 'DOSE OF JOSH';
   let index = 0;
   let currentText = intro;
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (index < currentText.length) {
               title.textContent += currentText[index];
               index++;
-              setTimeout(typeLetter, 150);
+              setTimeout(typeLetter, 170);
           } else if (currentText === intro) {
               setTimeout(() => {
                   isBackspacing = true;
@@ -112,3 +112,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   typeLetter();
 });
+
+const description = document.querySelector('.hero-description');
+
+window.addEventListener('scroll', function() {
+    if (elementInView(description, 0.6)) {  // 0.6 means 60% visible
+        description.style.opacity = "1";
+        description.style.transform = "translateY(0)";
+    }
+});
+
+function elementInView(el, visibilityThreshold = 1) {
+    const rect = el.getBoundingClientRect();
+    return (rect.top <= (window.innerHeight || document.documentElement.clientHeight) * visibilityThreshold) &&
+           ((rect.top + rect.height) >= 0);
+}
