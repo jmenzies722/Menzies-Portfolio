@@ -69,3 +69,46 @@ function elementVisible(el) {
 
     return (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
 }
+// ... Your existing JS code ...
+
+document.addEventListener('DOMContentLoaded', () => {
+  const title = document.querySelector('.hero-title');
+  title.textContent = '';  // Start with an empty title
+  title.classList.add('blinking');  // Start with blinking cursor
+  
+  const intro = 'Welcome';
+  const name = 'DOSE OF JOSH';
+  let index = 0;
+  let currentText = intro;
+  let isBackspacing = false;
+
+  function typeLetter() {
+      if (!isBackspacing) {
+          if (index < currentText.length) {
+              title.textContent += currentText[index];
+              index++;
+              setTimeout(typeLetter, 150);
+          } else if (currentText === intro) {
+              setTimeout(() => {
+                  isBackspacing = true;
+                  typeLetter();
+              }, 1000);
+          } else {
+              title.classList.remove('blinking');  // Stop blinking
+              title.classList.add('done-typing');  // Indicate that typing is done
+          }
+      } else {
+          if (title.textContent.length > 0) {
+              title.textContent = title.textContent.slice(0, -1);
+              setTimeout(typeLetter, 100);
+          } else if (currentText === intro) {
+              isBackspacing = false;
+              currentText = name;
+              index = 0;
+              typeLetter();
+          }
+      }
+  }
+
+  typeLetter();
+});
