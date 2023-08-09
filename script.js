@@ -145,5 +145,5 @@ document.addEventListener("DOMContentLoaded", function() {
   const spotify = document.querySelector('.spotify');
   
   planetCont.classList.add('slide-in');
-  spotify.classList.add('fade-in');
+  spotify.classList.add('slide-in');
 });
