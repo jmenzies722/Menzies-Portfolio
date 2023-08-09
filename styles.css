@@ -1,7 +1,8 @@
 body {
-    background: #136a8a;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif; /* Sets the font */
     background-size: cover;
@@ -11,6 +12,8 @@ body {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+
 .nav.sticky {
     position: fixed;
     top: 0;
@@ -143,14 +146,14 @@ body {
     animation: neonEffect 1.5s ease-in-out infinite alternate;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav a:hover {
     color: black;
-    background-color: rgba(32, 157, 168, 0.907);
-    border-color: rgba(255, 255, 255, 0.369);
-    box-shadow: 0px 0px 15px 5px rgba(65, 65, 65, 0.2);
-    transform: scale(1.1);
+    background: -webkit-linear-gradient(to right, rgba(242, 113, 33, 0.4), rgba(233, 64, 87, 0.6), rgba(138, 35, 135, 0.4));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(242, 113, 33, 0.4), rgba(233, 64, 87, 0.6), rgba(138, 35, 135, 0.4));  /* Standard syntax */
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px 2px rgba(65, 65, 65, 0.1);
+    transform: scale(1.05);
 }
-
 
 .social-icons {
     display: flex;
@@ -179,13 +182,8 @@ body {
     animation: neonEffect 1.5s ease-in-out infinite alternate;
 }
 
-.nav a:hover {
-    color: black;
-    background-color: rgba(32, 157, 168, 0.907);
-    border-color: rgba(255, 255, 255, 0.369);
-    box-shadow: 0px 0px 15px 5px rgba(65, 65, 65, 0.2);
-    transform: scale(1.1);
-}
+
+
 
 .section {
     margin-bottom: 40px;
