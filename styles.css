@@ -568,3 +568,19 @@ body {
     }
 }
 
+.planetCont {
+    width: 500px; /* adjust as required */
+    height: 500px; /* adjust as required */
+    position: relative; /* facilitates positioning within the container */
+    overflow: hidden; /* hide anything that might overflow the container */
+    border-radius: 50%; /* makes the div circular, if you want to give an appearance of a rounded planet */
+}
+
+.planetCont iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

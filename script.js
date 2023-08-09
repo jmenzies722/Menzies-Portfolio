@@ -128,3 +128,4 @@ function elementInView(el, visibilityThreshold = 1) {
            ((rect.top + rect.height) >= 0);
 }
 
+
