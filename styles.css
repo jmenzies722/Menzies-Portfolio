@@ -584,3 +584,14 @@ body {
     top: 0;
     left: 0;
 }
+
+/* Media query for mobile devices */
+
+@media (max-width: 767px) { 
+    /* Assuming you consider devices with width 767px or less as mobile */
+    
+    .planetCont {
+        width: 300px;  /* adjust as per your design preference */
+        height: 300px;
+    }
+}
