@@ -386,6 +386,7 @@ body {
     color: #c5c4c4;
     border-radius: 10px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
 }
 
 #about .section-title {
@@ -523,22 +524,22 @@ body {
   
   @media only screen and (max-width: 600px) {
     .container {
-        padding: 20px 10px;
-        width: 90%;
+        padding: 3px 15px;  
+        width: 100%;
     }
 
     .hero {
         height: auto;
-        padding: 100px 20px 50px;  /* Increased top padding */
+        padding: 150px 30px 60px;  
     }
 
     .hero-title {
-        font-size: 30px;
+        font-size: 34px;  
         text-align: left;
     }
 
     .hero-description {
-        font-size: 16px;
+        font-size: 18px;  
         text-align: left;
         max-width: 100%;
     }
@@ -551,29 +552,32 @@ body {
     .nav {
         flex-direction: column;
         height: auto;
-        padding: 2px 0;
+        padding: 15px 0;  
+        flex-wrap: wrap;
     }
 
-    .brand, .nav-link, .nav a {
-        margin-bottom: 10px;  /* Reduced margin */
+    .nav a {
+        font-size: 18px;   
+        padding: 12px 5px; 
+        margin-bottom: 10px;
     }
-
+}
     .nav-link, .nav a {
-        font-size: 14px;
-        padding: 8px;
+        font-size: 16px;
+        padding: 10px;    
     }
 
     .social-icons {
         justify-content: center;
     }
-}
-
+  
 .planetCont {
-    width: 500px; /* adjust as required */
-    height: 500px; /* adjust as required */
-    position: relative; /* facilitates positioning within the container */
-    overflow: hidden; /* hide anything that might overflow the container */
-    border-radius: 50%; /* makes the div circular, if you want to give an appearance of a rounded planet */
+    width: 500px;
+    height: 500px;
+    margin: 20px auto 60px auto; /* Increased the bottom margin to push Spotify further down */
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .planetCont iframe {
@@ -581,8 +585,38 @@ body {
     height: 100%;
     border: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Properly center the iframe within the .planetCont */
+}
+
+.spotify {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.spotify iframe {
+    width: 100%;
+    height: auto;
+    border: none;
+    display: block;
+    border-radius: 12px;
+    aspect-ratio: 400 / 152;
+}
+
+
+@media (max-width: 600px) {
+    .planetCont {
+        width: 300px;  /* adjust as per your design preference */
+        height: 300px; 
+    }
+
+    .spotify {
+        max-width: 90%;
+    }
 }
 
 /* Media query for mobile devices */
@@ -594,4 +628,23 @@ body {
         width: 300px;  /* adjust as per your design preference */
         height: 300px;
     }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInElement {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.6s forwards;
+    animation-delay: 0.3s; 
+    will-change: transform, opacity; 
 }
