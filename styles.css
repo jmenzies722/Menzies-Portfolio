@@ -590,6 +590,7 @@ body {
     transform: translate(-50%, -50%); /* Properly center the iframe within the .planetCont */
 }
 
+
 .spotify {
     width: 100%;
     max-width: 600px;
@@ -607,44 +608,78 @@ body {
     aspect-ratio: 400 / 152;
 }
 
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-@media (max-width: 600px) {
-    .planetCont {
-        width: 300px;  /* adjust as per your design preference */
-        height: 300px; 
+.planetCont, .spotify-wrapper {
+    flex: 1; 
+    margin: 0 20px; 
+}
+
+@media only screen and (max-width: 600px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: stretch; /* Ensures that the items stretch to fill the width of the parent container */
     }
 
-    .spotify {
-        max-width: 90%;
+    .planetCont, .spotify-wrapper {
+        width: 100%;
+        margin: 10px 0; 
+    }
+
+    .spotify-embed {
+        top: auto;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%); 
     }
 }
 
-/* Media query for mobile devices */
-
-@media (max-width: 767px) { 
-    /* Assuming you consider devices with width 767px or less as mobile */
-    
-    .planetCont {
-        width: 300px;  /* adjust as per your design preference */
-        height: 300px;
-    }
+body.dark-mode {
+    background: #000010;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000010, #000030);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000010, #000030); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff; /* Set the font color to white for better visibility in dark mode */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#darkModeToggle {
+    display: block;
+    margin: 20px auto; /* Centers the button and adds spacing */
+    padding: 10px 20px;
+    background-color: #313235;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.fadeInElement {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 0.6s forwards;
-    animation-delay: 0.3s; 
-    will-change: transform, opacity; 
+#darkModeToggle:hover {
+    background-color: #2a2a2b;
+}
+/* Stylish button */
+.space-button {
+    background: #1e2a38;  /* A deep space blue */
+    border: none;
+    color: #ffffff;  /* White text */
+    padding: 10px 20px;
+    border-radius: 25px;  /* Rounded corners */
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* A subtle shadow */
+    position: relative; 
+    bottom: 60px;  /* Position above the Spotify embed */
+    left: 35%;  /* Adjust for desired horizontal positioning */
+}
+
+.space-button:hover {
+    background: #233544;  /* A slightly darker shade for hover effect */
+    transform: scale(1.05);  /* Slightly enlarge when hovered */
 }

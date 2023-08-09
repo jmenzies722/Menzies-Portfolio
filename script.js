@@ -128,4 +128,14 @@ function elementInView(el, visibilityThreshold = 1) {
            ((rect.top + rect.height) >= 0);
 }
 
+const spaceButton = document.getElementById('spaceButton');
 
+spaceButton.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+
+    if (document.body.classList.contains('dark-mode')) {
+        spaceButton.textContent = "Back to Earth";
+    } else {
+        spaceButton.textContent = "Go to Space";
+    }
+});
