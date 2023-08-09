@@ -139,3 +139,11 @@ spaceButton.addEventListener('click', function() {
         spaceButton.textContent = "Go to Space";
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const planetCont = document.querySelector('.planetCont');
+  const spotify = document.querySelector('.spotify');
+  
+  planetCont.classList.add('slide-in');
+  spotify.classList.add('fade-in');
+});
