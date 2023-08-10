@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   title.textContent = '';  // Start with an empty title
   title.classList.add('blinking');  // Start with blinking cursor
   
-  const intro = 'WELCOME TO THE SOURCE 🚀';
+  const intro = 'WELCOME 👋';
   const name = 'DOSE OF JOSH';
   let index = 0;
   let currentText = intro;
@@ -127,21 +127,4 @@ function elementInView(el, visibilityThreshold = 1) {
     return (rect.top <= (window.innerHeight || document.documentElement.clientHeight) * visibilityThreshold) &&
            ((rect.top + rect.height) >= 0);
 }
-
-// Add this script to your JavaScript
-const playlistLink = document.getElementById('playlist-link');
-const spotifyPlayer = document.getElementById('spotify-player');
-
-let isPlayerVisible = false;
-
-playlistLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    isPlayerVisible = !isPlayerVisible;
-
-    if (isPlayerVisible) {
-        spotifyPlayer.style.display = 'block';
-    } else {
-        spotifyPlayer.style.display = 'none';
-    }
-});
 
