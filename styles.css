@@ -1,8 +1,8 @@
 body {
-    background: #136a8a;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: #000010;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000010, #000030);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000010, #000030); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif; /* Sets the font */
     background-size: cover;
@@ -116,7 +116,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 85px;
+    height: 90px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     position: fixed;
@@ -134,6 +134,7 @@ body {
 .nav-link {
     color: rgb(255, 255, 255);
     background-color: black;
+    margin-right: auto;
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
@@ -574,129 +575,49 @@ body {
         justify-content: center;
     }
   
-    .planetCont {
-        width: 500px;
-        height: 500px;
-        margin: 20px auto 60px auto;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%;
-        transform: translateX(-110%); /* initial state for slide-in animation */
-        opacity: 0; /* make it invisible initially */
-        transition: transform 1.5s cubic-bezier(0.2, 1, 0.3, 1), opacity 1s ease-out 0.5s; /* transition with bezier curve and delay */
-    }
-    
-    .planetCont.slide-in {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    
-    .planetCont iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    
-    .spotify {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto 20px auto;
-        position: relative;
-        overflow: hidden;
-        opacity: 0; /* make it invisible initially */
-        transform: translateY(50px); /* slide it down initially */
-    }
-    
  
-    
-    
-    .spotify iframe {
-        width: 100%;
-        height: auto;
-        border: none;
-        display: block;
-        border-radius: 12px;
-        aspect-ratio: 400 / 152;
-    }
-    
-    .content-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .planetCont, .spotify-wrapper {
-        flex: 1; 
-        margin: 0 20px;
-    }
-    
-
-
-@media only screen and (max-width: 600px) {
-    .content-wrapper {
-        flex-direction: column;
-        align-items: stretch; /* Ensures that the items stretch to fill the width of the parent container */
-    }
-
-    .planetCont, .spotify-wrapper {
-        width: 100%;
-        margin: 10px 0; 
-    }
-
-    .spotify-embed {
-        top: auto;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%); 
-    }
+/* Content wrapper styles */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    overflow: hidden;
+    padding: 2% 0;
 }
 
-body.dark-mode {
-    background: #000010;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #000010, #000030);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #000010, #000030); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff; /* Set the font color to white for better visibility in dark mode */
+.planetCont {
+    width: 50vmin;
+    height: 50vmin;
+    margin-top: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
 }
 
-#darkModeToggle {
-    display: block;
-    margin: 20px auto; /* Centers the button and adds spacing */
-    padding: 10px 20px;
-    background-color: #313235;
-    color: #ffffff;
+.planetCont iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-#darkModeToggle:hover {
-    background-color: #2a2a2b;
+/* Spotify player styles */
+.spotify-player {
+    display: none;
+    width: 50%; /* Adjust the width as needed */
+    margin-top: 70px; /* Adjust the margin-top as needed */
+    padding: 10px; /* Adjust padding to your preference */
+    background-color: transparent; /* Remove background color */
+    box-shadow: none; /* Remove box shadow */
 }
-/* Stylish button */
-.space-button {
-    background: #1e2a38;  /* A deep space blue */
+
+.spotify-embed {
+    top: 40px;
+    width: 100%;
+    height: 40%;
     border: none;
-    color: #ffffff;  /* White text */
-    padding: 10px 20px;
-    border-radius: 25px;  /* Rounded corners */
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* A subtle shadow */
-    position: relative; 
-    bottom: 60px;  /* Position above the Spotify embed */
-    left: 35%;  /* Adjust for desired horizontal positioning */
-}
-
-.space-button:hover {
-    background: #233544;  /* A slightly darker shade for hover effect */
-    transform: scale(1.05);  /* Slightly enlarge when hovered */
 }

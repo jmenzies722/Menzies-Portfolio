@@ -128,22 +128,20 @@ function elementInView(el, visibilityThreshold = 1) {
            ((rect.top + rect.height) >= 0);
 }
 
-const spaceButton = document.getElementById('spaceButton');
+// Add this script to your JavaScript
+const playlistLink = document.getElementById('playlist-link');
+const spotifyPlayer = document.getElementById('spotify-player');
 
-spaceButton.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
+let isPlayerVisible = false;
 
-    if (document.body.classList.contains('dark-mode')) {
-        spaceButton.textContent = "Back to Earth";
+playlistLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    isPlayerVisible = !isPlayerVisible;
+
+    if (isPlayerVisible) {
+        spotifyPlayer.style.display = 'block';
     } else {
-        spaceButton.textContent = "Go to Space";
+        spotifyPlayer.style.display = 'none';
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const planetCont = document.querySelector('.planetCont');
-  const spotify = document.querySelector('.spotify');
-  
-  planetCont.classList.add('slide-in');
-  spotify.classList.add('slide-in');
-});
