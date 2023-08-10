@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   title.textContent = '';  // Start with an empty title
   title.classList.add('blinking');  // Start with blinking cursor
   
-  const intro = 'Welcome Everyone 👋';
+  const intro = 'WELCOME TO THE SOURCE! 🚀';
   const name = 'DOSE OF JOSH';
   let index = 0;
   let currentText = intro;
