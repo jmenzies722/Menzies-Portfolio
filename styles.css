@@ -94,7 +94,6 @@ body {
             transform: translateY(0);
         }
     }
-    
 
     
     .hero-image img {
@@ -155,6 +154,8 @@ body {
     transform: scale(1.1);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap'); /* importing a futuristic font */
+
 
 .social-icons {
     display: flex;
@@ -192,81 +193,80 @@ body {
 }
 
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 60px; /* Increased spacing for a more open feel */
 }
 
-.section-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    animation: fadeInUp 1s ease-in-out;
-}
 
 .section-description {
-    font-size: 18px;
-    animation: fadeInUp 1s ease-in-out;
+    font-size: 20px; /* Increased for better readability */
+    color: #dcdcdc; /* Slightly dimmer for contrast */
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.08); /* Gentle glow for readability */
+    animation: fadeInUp 1.2s ease-in-out;
 }
 
-.project-grid {
+.project-grid, .education-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 30px;
-    padding-top: 60px;
+    grid-gap: 40px; /* Slightly increased for better separation */
+    padding-top: 70px; /* More breathing room */
 }
 
-.project-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.project-item, .education-item {
+    background-color: rgba(42, 47, 59, 0.7); /* A deep space blue */
+    padding: 25px; /* Increased padding for more space */
+    border-radius: 15px; /* Smoother rounded corners */
+    box-shadow: 0px 5px 20px rgba(64, 64, 64, 0.2); /* Depth and elevation */
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
     will-change: transform;
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
 }
 
-.project-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
+.project-item:hover, .education-item:hover {
+    background-color: rgba(56, 62, 77, 0.8); /* Lighter shade on hover */
+    transform: scale(1.07); /* More noticeable scaling on hover */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-
-.project-item img {
+.project-item img, .education-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 15px; /* Consistency in border radius */
+    margin-bottom: 15px; /* Increased margin for better separation */
+    transition: transform 0.4s ease; /* Animated images */
 }
 
-.education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 30px;
-    padding-top: 60px;
+.project-item img:hover, .education-item img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
 }
+
+
 
 .education-item {
-    background-color: rgba(255, 255, 255, 0.137);
-    padding: 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: rgba(25, 25, 50, 0.7); /* Deep space tone for background */
+    padding: 25px; /* Slightly increased padding for emphasis */
+    border-radius: 15px; /* Slightly rounder for a softer feel */
+    box-shadow: 0px 0px 30px rgba(50, 50, 100, 0.1), inset 0px 0px 50px rgba(0, 0, 0, 0.4); /* Outer glow & Inner shadow for depth */
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease; /* Smooth transitions */
     will-change: transform;
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
 }
-
-.education-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
-}
-
 
 .education-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 15px; /* Consistent border-radius with container */
+    margin-bottom: 15px; /* More spacing for visual separation */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transition effect for both transform and shadow */
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.1); /* Initial gentle glow */
+}
+
+.education-item img:hover {
+    transform: scale(1.06); /* Zoom effect on hover */
+    box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.2); /* Enhanced glow on hover */
 }
 
 .skills-grid {
@@ -386,12 +386,14 @@ body {
     "images images";
     grid-gap: 20px;
     padding: 20px;
-    background-color: #0da8a033;
+    background-color: rgba(21, 21, 21, 0.5);  /* Adjusting the transparency */
+    backdrop-filter: blur(5px);  /* Blurring effect */
     color: #c5c4c4;
     border-radius: 10px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
 }
+
 
 #about .section-title {
     grid-area: title;
@@ -516,7 +518,7 @@ body {
 
 .section-title {
     font-size: 2.5em; /* Sets the size */
-    color: #333; /* Sets the color */
+    color: #d7d3d3; /* Sets the color */
     text-align: center; /* Centers the text */
     margin-bottom: 20px; /* Adds some space below the title */
     transition: color 0.3s ease; /* Adds a transition effect to the color property */
@@ -525,57 +527,6 @@ body {
   .section-title:hover {
     color: #aeaeae; /* Changes the color of the text on hover */
   }
-  
-  @media only screen and (max-width: 600px) {
-    .container {
-        padding: 3px 15px;  
-        width: 100%;
-    }
-
-    .hero {
-        height: auto;
-        padding: 150px 30px 60px;  
-    }
-
-    .hero-title {
-        font-size: 34px;  
-        text-align: left;
-    }
-
-    .hero-description {
-        font-size: 18px;  
-        text-align: left;
-        max-width: 100%;
-    }
-
-    .hero-image img {
-        width: 100%;
-        height: auto;
-    }
-
-    .nav {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 0;  
-        flex-wrap: wrap;
-    }
-
-    .nav a {
-        font-size: 18px;   
-        padding: 12px 5px; 
-        margin-bottom: 10px;
-    }
-}
-    .nav-link, .nav a {
-        font-size: 16px;
-        padding: 10px;    
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-  
- 
 /* Content wrapper styles */
 .content-wrapper {
     display: flex;
@@ -622,3 +573,6 @@ body {
     height: 40%;
     border: none;
 }
+
+/* Add this CSS to your existing styles */
+
