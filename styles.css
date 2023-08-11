@@ -154,8 +154,6 @@ body {
     transform: scale(1.1);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap'); /* importing a futuristic font */
-
 
 .social-icons {
     display: flex;
@@ -300,19 +298,6 @@ body {
     margin: 0;
 }
 
-.skill-item .level-bar {
-    width: 100%;
-    background-color: #f3f3f3;
-    margin-top: 10px;
-    height: 20px;
-    border-radius: 10px;
-}
-
-.skill-item .level-bar .level-bar-inner {
-    height: 100%;
-    background-color: #14e5ec;
-    border-radius: 10px;
-}
 
 
 .contact-details p {
@@ -574,4 +559,118 @@ body {
 
 /* Add this CSS to your existing styles */
 
-/* Media Query for Mobile and Tablets */
+@media only screen and (max-width: 768px) { 
+
+    .hero-title {
+        position: relative;
+        top: 25px;  /* Adjust this value as needed */
+        font-size: 40px;
+    }
+
+    .hero-description {
+        position: relative;
+        top: 25px;
+        font-size: 12px;       /* Maybe slightly smaller font for mobile */
+        width: 100%;           /* Full width of the container */
+        text-align: left;      /* Align text to the left */
+        margin: 0 auto;        /* Centering the block if needed */
+        padding: 0 10px;       /* Padding on sides to ensure text doesn't touch the edges */
+    }
+    /* Container adjustments */
+    .container {
+        width: 95%;
+        padding: 5px;
+    }
+    
+    /* Adjusting section titles for smaller screens */
+
+
+
+    .nav {
+        flex-direction: column;
+        align-items: start;
+        height: auto;
+        padding: 15px;
+    }
+
+    .brand {
+        margin-bottom: 15px; /* Add some space between the brand and the links on smaller screens */
+    }
+
+    .nav-link, .nav a {
+        display: block; /* Make links stack vertically */
+        width: 100%; /* Full width for better touch targets */
+        margin: 5px 0; /* Adjust margin for stacking */
+        text-align: center; /* Center the link text */
+        font-size: 14px; /* Reduce font size for mobile */
+    }
+    
+    /* Adjusting project and education image sizes */
+    .project-item img, .education-item img {
+        margin-bottom: 5px;
+    }
+    
+    /* Adjusting the about section */
+    #about {
+        grid-template-areas: 
+        "title title"
+        "text text"
+        "images images";
+        padding: 10px;
+        margin-top: 20px;
+    }
+    
+    #about .section-title {
+        font-size: 12px;
+    }
+    
+    #about .section-description {
+        font-size: 13px;
+        line-height: 2.0;
+        text-align: left;
+     
+    }
+    
+    #about .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Using 2 instead of 3 for smaller screens */
+    }
+    
+    /* Adjusting the scrollToTop button */
+    #scrollToTop {
+        bottom: 10px;
+        right: 15px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Adjustments for footer content */
+    .footer-content h3 {
+        margin-bottom: 5px;
+    }
+    
+    .socials {
+        gap: 15px;
+    }
+    .content-wrapper {
+        height: auto;
+        padding: 20px 0; /* increased padding for better spacing */
+    }
+
+    .planetCont {
+        width: 50vmin;  /* Adjust size if needed */
+        height: 50vmin;
+        margin: 0 auto;  /* horizontally centers the planet if its parent doesn't use flex or grid */
+        display: block;  /* ensures the auto margins work */
+    }
+
+    /* Adjustments for Spotify player */
+    .spotify-player {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .spotify-embed {
+        width: 90%;
+        height: auto;
+    }
+}
