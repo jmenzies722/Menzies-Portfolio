@@ -1,8 +1,5 @@
 body {
-    background: #000010;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #000010, #000030);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #000010, #000030); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background-color: black; /* Set the background color to black */
     background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif; /* Sets the font */
     background-size: cover;
@@ -11,8 +8,41 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin: 0;
 }
 
+
+canvas {
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire viewport width */
+    height: 100%; /* Cover the entire viewport height */
+    z-index: -1; /* Place the canvas behind other content */
+}
+
+@keyframes pointDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px); /* Adjust the distance for pointing animation */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.scroll-down-link {
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px; /* Adjust the icon size */
+    color: white; /* Adjust the color */
+    text-decoration: none;
+    animation: pointDown 2s infinite;
+    scroll-behavior: smooth;
+  }
 
 .nav.sticky {
     position: fixed;

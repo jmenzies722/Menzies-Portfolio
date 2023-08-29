@@ -128,3 +128,7 @@ function elementInView(el, visibilityThreshold = 1) {
            ((rect.top + rect.height) >= 0);
 }
 
+function scrollToSection(sectionId) {
+  const section = document.querySelector(sectionId);
+  section.scrollIntoView({ behavior: 'smooth' });
+}
