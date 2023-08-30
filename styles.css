@@ -34,14 +34,13 @@ canvas {
 }
 .scroll-down-link {
     position: absolute;
-    bottom: 20px; /* Adjust the distance from the bottom */
+    bottom: 65px; /* Adjust the distance from the bottom */
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px; /* Adjust the icon size */
     color: white; /* Adjust the color */
     text-decoration: none;
     animation: pointDown 2s infinite;
-    scroll-behavior: smooth;
   }
 
 .nav.sticky {
@@ -145,8 +144,8 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 90px;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 70px;
+    background-color: rgba(168, 160, 160, 0.024);
     color: white;
     position: fixed;
     width: 100%;
