@@ -54,7 +54,7 @@
     }
     #profile {
       height: 83vh;
-      margin-top: 125px;     /* Additional margin at the top to push it down */
+      margin-top: 90px;     /* Additional margin at the top to push it down */
       margin-bottom: 0;
     }
     article {
@@ -120,5 +120,27 @@
         height: 200px;         /* Ensures the image maintains its aspect ratio */
         border-radius: 10;
     }
-    
+
+    .menu-links {
+      background-color: transparent;
+      /* If there's any padding or margin causing spacing issues, you can adjust or reset them here. */
+      padding: 0;
+      margin: 0;
+  }
+
+  .menu-links li a {
+      color: rgb(255, 255, 255); /* Assuming you want the text to be purple. Adjust the color as necessary. */
+      /* Optional: Add a hover effect to give feedback when a link is hovered over */
+      transition: color 0.3s ease;
+      font-size: 18px;
+  }
+
+  .menu-links li a:hover {
+      color: #9b59b6; /* Slightly different shade of purple for hover effect. Adjust as desired. */
+  }
+
+  .experience-details-container {
+    margin-left: -20px; /* Adjust this value as needed. */
+}
+
 }
