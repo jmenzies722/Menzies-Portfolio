@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Josh M.</div>
+      <div class="logo"></div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -38,20 +38,20 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+        <img src="./assets/IMG_2589.jpg" alt="John Doe profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Josh M.</h1>
-        <p class="section__text__p2">Software Engineer</p>
+        <p class="section__text__p1 section__text__animated" data-text="Hello, I'm"></p>
+        <h1 class="title section__text__animated" data-text="Josh M."></h1>
+        <p class="section__text__p2 section__text__animated" data-text="Software Engineer"></p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            onclick="window.open('./assets/MenziesJ-Resume.pdf')"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
             Contact Info
           </button>
         </div>
@@ -68,193 +68,153 @@
             class="icon"
             onclick="location.href='https://github.com/'"
           />
+          <button id="darkModeToggle" class="dark-mode-btn" title="Toggle Dark Mode">🌙</button>
+
         </div>
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1"> More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+        <p class="section__text__p1">More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img
+                    src="./assets/FullSizeRender_Original.JPG"
+                    alt="Joshua Menzies profile picture"
+                    class="about-pic"
+                />
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img
+                            src="./assets/experience.png"
+                            alt="Experience icon"
+                            class="icon"
+                        />
+                        <h3>Experience</h3>
+                        <p>2+ years Software Development</p>
+                        <p>Nebula Academy Full Stack Development</p>
+                    </div>
+                    <div class="details-container">
+                        <img
+                            src="./assets/education.png"
+                            alt="Education icon"
+                            class="icon"
+                        />
+                        <h3>Education</h3>
+                        <p>B.Sc. , Computer Engineering (minor: Computer Science)<br />University of Hartford, Dean’s List 2020-2023.</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        Hello, I'm Joshua Menzies, recent computer engineering and computer science graduate passionate about software engineering. I'm committed to leveraging my full-stack development, data engineering, and AI/ML skills to create innovative solutions. My background includes executing software solutions at the intersection of hardware, software, and content. I utilize an iterative approach for data-intensive applications and thrive in both autonomous and team-driven settings. I've led design and development for applications such as the Medi app, increasing user experience significantly. I'm excited about the future of technology and am eager to contribute to an organization's success. Connect with me on <a href="https://www.linkedin.com/in/josh-m123456/" target="_blank">LinkedIn</a>.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-            </div>
+    
+        <section id="experience">
+          <p class="section__text__p1">Explore My</p>
+          <h1 class="title">Experience</h1>
+          <div class="experience-details-container">
+              <div class="about-containers">
+                  <div class="details-container">
+                      <h2 class="experience-sub-title">Frontend Technologies</h2>
+                      <div class="article-container">
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>HTML & CSS</h3>
+                                  <p>Developed responsive UI with semantic HTML and modern CSS techniques.</p>
+                              </div>
+                          </article>
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>JavaScript & TypeScript</h3>
+                                  <p>Implemented interactive features and integrated APIs for web applications.</p>
+                              </div>
+                          </article>
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>React & Material UI</h3>
+                                  <p>Used for developing and designing UI components in various projects.</p>
+                              </div>
+                          </article>
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>Bootstrap</h3>
+                                  <p>Utilized for rapid UI development and responsive design.</p>
+                              </div>
+                          </article>
+      
+                      </div>
+                  </div>
+                  
+                  <div class="details-container">
+                      <h2 class="experience-sub-title">Backend & Database</h2>
+                      <div class="article-container">
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>Node.js & Express.js</h3>
+                                  <p>Developed server-side logic, defined and maintained databases.</p>
+                              </div>
+                          </article>
+
+                          <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Python</h3>
+                                <p>Used in various data processing and AI/ML projects</p>
+                            </div>
+                        </article>
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>PostgreSQL</h3>
+                                  <p>Managed relational databases and ensured data integrity.</p>
+                              </div>
+                          </article>
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>MongoDB</h3>
+                                  <p>Experience with NoSQL databases for flexible schema design.</p>
+                              </div>
+                          </article>
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>Git</h3>
+                                  <p>Utilized for version control in various projects, proficient in branching and merging.</p>
+                              </div>
+                          </article>
+      
+                          <article>
+                              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                              <div>
+                                  <h3>AWS Cloud Computing</h3>
+                                  <p>Deployed and managed applications on AWS platforms.</p>
+                              </div>
+                          </article>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+    
+
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
@@ -264,12 +224,15 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
+                src="./assets/Screenshot 2023-10-05 at 8.07.46 PM.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">Sumz AI</h2>
+            <p>
+              Sumz AI is an advanced article summarizer powered by OpenAI. By simply inputting a link, the tool delves into the content and delivers a concise, coherent summary, making complex articles more digestible and time-efficient for readers
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -288,12 +251,15 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
+                src="./assets/Screenshot 2023-08-07 at 2.57.02 PM.png"
                 alt="Project 2"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Echo Equations</h2>
+            <p>
+              Echo Equations is an innovative application leveraging the WebSpeech API to accept voice inputs for mathematical operations. Users can vocally command the app to execute standard mathematical calculations, offering a hands-free approach to solving equations
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -312,12 +278,15 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-3.png"
+                src="./assets/Screenshot 2023-09-14 at 1.56.18 PM.png"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">Velocity Cube</h2>
+            <p>
+              Velocity cube is a dynamic 3D game developed using Three.js. Set in a futuristic world, players navigate a cube to dodge obstacles and achieve the longest run possible. Integration with Google authentication via Firebase ensures user-specific experiences, allowing players to log in seamlessly and retrieve their personal high scores, fostering a competitive environment
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -332,15 +301,12 @@
                 Live Demo
               </button>
             </div>
+            
           </div>
+          
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+   
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
@@ -352,7 +318,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+          <p><a href="mailto:jmenzies722@gmail.com">jmenzies722@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -375,7 +341,7 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+      <p>Copyright &#169; 2023 Josh M. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>

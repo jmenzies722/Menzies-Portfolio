@@ -167,6 +167,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  border-radius: 20%;
 }
 
 .section__pic-container {
@@ -174,6 +175,15 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+.section__pic-container img[src="./assets/IMG_2589.jpg"] {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;             /* Make the image rounded */
+  filter: grayscale(100%);        /* Turn the image black and white */
+  border: 2px solid #000;   
 }
 
 .section__text {
@@ -357,6 +367,7 @@ article .icon {
 
 #projects {
   position: relative;
+  margin-top:100px;
 }
 
 .color-container {
@@ -366,8 +377,8 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 300px;
+  height: 200px;
 }
 
 .project-title {
@@ -430,3 +441,73 @@ footer {
 footer p {
   text-align: center;
 }
+.dark-mode-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+  outline: none;
+}
+
+.dark-mode-btn:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode .dark-mode-btn {
+  opacity: 0.7; /* This will slightly fade out the moon when sun is active */
+}
+
+/* Dark Mode Styles */
+/* Dark Mode Styles */
+
+body.dark-mode {
+  background-color: #121212; /* dark background */
+  color: #FFFFFF; /* white text */
+}
+
+body.dark-mode a, 
+body.dark-mode a:hover {
+  color: #BB86FC; /* purple links color in dark mode */
+  text-decoration-color: #BB86FC;
+}
+
+body.dark-mode .btn-color-1, 
+body.dark-mode .btn-color-2:hover {
+  background: #2e2e2e;
+  border: #BB86FC 0.1rem solid;
+  color: #FFFFFF; /* Making text white on buttons */
+}
+
+body.dark-mode .btn-color-2, 
+body.dark-mode .btn-color-1:hover {
+  background: #2e2e2e;
+  border: #BB86FC 0.1rem solid;
+  color: #FFFFFF; /* Making text white on buttons */
+}
+
+body.dark-mode .details-container {
+  background: #2e2e2e;
+  border-color: #2e2e2e;
+  color: #FFFFFF; /* Making text white on containers */
+}
+
+body.dark-mode .color-container {
+  background: #2e2e2e;
+  border-color: #2e2e2e;
+  color: #FFFFFF; /* Making text white on containers */
+}
+
+body.dark-mode #desktop-nav, 
+body.dark-mode #hamburger-nav {
+  background-color: #121212;
+}
+
+body.dark-mode p, 
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+  color: #FFFFFF; /* Making all text elements white */
+}
+
+/* ... add more specific styles for other components for dark mode ... */
