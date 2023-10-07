@@ -105,13 +105,13 @@ a:hover {
 }
 
 .menu-links a {
+  color: black; /* This ensures that links are black in light mode */
   display: block;
   padding: 10px;
   text-align: center;
-  font-size: 1.5rem;
-  color: black;
+  font-size: 16px;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;  /* Corrected typo from '0.3' to '0.3s' */
 }
 
 .menu-links li {
@@ -119,7 +119,7 @@ a:hover {
 }
 
 .menu-links.open {
-  max-height: 300px;
+  max-height: 600px;
 }
 
 .hamburger-icon.open span:first-child {
@@ -175,16 +175,28 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  position: relative;
 }
 
-.section__pic-container img[src="./assets/IMG_2589.jpg"] {
+.profile-pic {
   display: block;
-  width: 100%;
+  width: calc(100% - 8px);
   height: auto;
-  border-radius: 50%;             /* Make the image rounded */
-  filter: grayscale(100%);        /* Turn the image black and white */
-  border: 2px solid #000;   
+  border-radius: 50%;
+  position: relative;
 }
+
+.panther-border {
+  z-index: 2;
+  margin: 4px;
+  box-shadow: 0 0 0 4px black;  /* Black border for light mode */
+}
+
+body.dark-mode .panther-border {
+  box-shadow: 0 0 0 4px rgba(115, 7, 173, 0.486);  /* Vibranium Blue with some transparency for dark mode */
+}
+
+
 
 .section__text {
   align-self: center;
@@ -221,6 +233,10 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+}
+
+.dark-mode .icon {
+  color: white;
 }
 
 /* BUTTONS */
@@ -297,11 +313,7 @@ section {
   border-radius: 2rem;
 }
 
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
+
 
 .details-container {
   padding: 1.5rem;
@@ -367,7 +379,7 @@ article .icon {
 
 #projects {
   position: relative;
-  margin-top:100px;
+  margin-top: 100px;
 }
 
 .color-container {
@@ -390,7 +402,6 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
   margin-top: 7%;
-
 }
 
 /* CONTACT */
@@ -398,6 +409,7 @@ article .icon {
 #contact {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   height: 70vh;
 }
@@ -465,51 +477,65 @@ body.dark-mode .dark-mode-btn {
 
 body.dark-mode {
   background-color: #121212; /* dark background */
-  color: #FFFFFF; /* white text */
+  color: #ffffff; /* white text */
 }
 
-body.dark-mode a, 
+body.dark-mode a {
+  background: linear-gradient(90deg, #551A8B, #A020F0); /* Gradient from dark purple to vibrant purple */
+  color: transparent; /* This will make the color transparent and let the background gradient show */
+  -webkit-background-clip: text; /* This will clip the background to the text */
+  background-clip: text;
+  text-decoration: none; /* Removing the underline from links */
+}
+
+/* Hover state for links in dark mode */
 body.dark-mode a:hover {
-  color: #BB86FC; /* purple links color in dark mode */
-  text-decoration-color: #BB86FC;
+  color: transparent; /* Keep the color transparent to show the gradient */
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(126, 5, 150);
 }
 
-body.dark-mode .btn-color-1, 
+body.dark-mode .btn-color-1,
 body.dark-mode .btn-color-2:hover {
   background: #2e2e2e;
-  border: #BB86FC 0.1rem solid;
-  color: #FFFFFF; /* Making text white on buttons */
+  border: #bb86fc 0.1rem solid;
+  color: #ffffff; /* Making text white on buttons */
 }
 
-body.dark-mode .btn-color-2, 
+body.dark-mode .btn-color-2,
 body.dark-mode .btn-color-1:hover {
   background: #2e2e2e;
-  border: #BB86FC 0.1rem solid;
-  color: #FFFFFF; /* Making text white on buttons */
+  border: #bb86fc 0.1rem solid;
+  color: #ffffff; /* Making text white on buttons */
 }
 
 body.dark-mode .details-container {
   background: #2e2e2e;
   border-color: #2e2e2e;
-  color: #FFFFFF; /* Making text white on containers */
+  color: #ffffff; /* Making text white on containers */
 }
 
 body.dark-mode .color-container {
   background: #2e2e2e;
   border-color: #2e2e2e;
-  color: #FFFFFF; /* Making text white on containers */
+  color: #ffffff; /* Making text white on containers */
 }
 
-body.dark-mode #desktop-nav, 
+body.dark-mode #socials-container .icon {
+  visibility: hidden;
+}
+
+body.dark-mode #desktop-nav,
 body.dark-mode #hamburger-nav {
   background-color: #121212;
 }
 
-body.dark-mode p, 
-body.dark-mode h1, 
-body.dark-mode h2, 
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
 body.dark-mode h3 {
-  color: #FFFFFF; /* Making all text elements white */
+  color: #ffffff; /* Making all text elements white */
 }
 
 .toggle-switch {
@@ -542,3 +568,50 @@ body.dark-mode h3 {
 }
 
 /* ... add more specific styles for other components for dark mode ... */
+.section__text p,
+.section__text h1,
+h1,
+h2,
+.section-title {
+  color: #000; /* Black text */
+  background-image: none; /* Removing any gradient */
+  -webkit-background-clip: initial; /* Resetting the background clip for Webkit browsers */
+  background-clip: initial;
+}
+
+/* If there are other titles or text elements you want in black, add them to the selector list above. */
+
+body.dark-mode .section__text p,
+body.dark-mode .section__text h1,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode .section-title {
+  background-image: linear-gradient(
+    90deg,
+    #551a8b,
+    #a020f0
+  ); /* Black Panther themed gradient */
+  color: transparent; /* Making the color transparent to reveal the gradient */
+  -webkit-background-clip: text; /* This clips the background to the text for Webkit browsers */
+  background-clip: text;
+  background-color: transparent; /* Ensure that the color is set to transparent so that only the background shows */
+}
+
+.logo {
+  color: #000; /* Black text */
+  background-image: none; /* Removing any gradient */
+  -webkit-background-clip: initial; /* Resetting the background clip for Webkit browsers */
+  background-clip: initial;
+}
+
+body.dark-mode .logo {
+  background-image: linear-gradient(
+    90deg,
+    #551a8b,
+    #a020f0
+  ); /* Black Panther themed gradient */
+  color: transparent; /* Making the color transparent to reveal the gradient */
+  -webkit-background-clip: text; /* This clips the background to the text for Webkit browsers */
+  background-clip: text;
+  background-color: transparent; /* Ensure that the color is set to transparent so that only the background shows */
+}

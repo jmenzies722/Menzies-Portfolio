@@ -1,146 +1,180 @@
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-    #contact,
-    #projects {
-      height: fit-content;
-    }
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
+  .about-containers {
+    flex-wrap: wrap;
   }
-  
-  @media screen and (max-width: 600px) {
-    #contact,
-    footer {
-      height: 40vh;
-    }
-    #profile {
-      height: 83vh;
-      margin-top: 90px;     /* Additional margin at the top to push it down */
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
-    }
-    .contact-info-container {
-      margin: 0;
-    }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 2rem;
-    }
-    .text-container {
-      text-align: justify;
-    }
-    .section__pic-container img[src="./assets/IMG_2589.jpg"] {
-        width: 800%;         /* Image takes full width of its container */
-        max-width: 185px;    /* Limits the image width to 300px */
-        height: auto;        /* Ensures the image maintains its aspect ratio */
-        display: block;      /* Removes any default spacing around the image */
-        margin: 0 auto;      /* Centers the image horizontally in its container */
-        object-fit: cover;   /* If you have a specific height on the container, this ensures the image covers that space */
-        border-radius: 50%;  /* Optional: If you want the image to be rounded */
-    }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
 
-    .section__pic-container {
-        width: 60%; /* Ensures the container takes up the full width available */
-    }
-    
-    .section__pic-container img[src="./assets/FullSizeRender_Original.JPG"] {
-        width: 80%;           /* Sets the image width directly to 90% of its container */
-        height: 200px;         /* Ensures the image maintains its aspect ratio */
-        border-radius: 10;
-    }
-
-    .menu-links {
-      background-color: transparent;
-      /* If there's any padding or margin causing spacing issues, you can adjust or reset them here. */
-      padding: 0;
-      margin: 0;
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+  .menu-links a {
+    color: #000; /* Black text */
+    text-decoration: none; /* Removes the default underline */
+    background-image: none; /* No gradient background */
+    -webkit-background-clip: initial; /* Resetting the background clip for Webkit browsers */
+    background-clip: initial;
   }
 
-  .menu-links li a {
-      color: rgb(255, 255, 255); /* Assuming you want the text to be purple. Adjust the color as necessary. */
-      /* Optional: Add a hover effect to give feedback when a link is hovered over */
-      transition: color 0.3s ease;
-      font-size: 18px;
+  .menu-links a:hover {
+    text-decoration: underline; /* Underline on hover for a clear feedback */
+  }
+  .menu-links {
+    background-color: transparent; /* Ensures there's no background */
   }
 
-  .menu-links li a:hover {
-      color: #9b59b6; /* Slightly different shade of purple for hover effect. Adjust as desired. */
+  .menu-links a:hover {
+    text-decoration: underline; /* Underline on hover for feedback in dark mode */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-top: 90px; /* Additional margin at the top to push it down */
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+  .section__pic-container img[src="./assets/IMG_2589.jpg"] {
+    width: 800%; /* Image takes full width of its container */
+    max-width: 185px; /* Limits the image width to 300px */
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    display: block; /* Removes any default spacing around the image */
+    margin: 0 auto; /* Centers the image horizontally in its container */
+    object-fit: cover; /* If you have a specific height on the container, this ensures the image covers that space */
+    border-radius: 50%; /* Optional: If you want the image to be rounded */
+  }
+
+  .section__pic-container {
+    width: 60%; /* Ensures the container takes up the full width available */
+  }
+
+  .section__pic-container img[src="./assets/FullSizeRender_Original.JPG"] {
+    width: 80%; /* Sets the image width directly to 90% of its container */
+    height: 200px; /* Ensures the image maintains its aspect ratio */
+    border-radius: 10;
+  }
+
+  .menu-links {
+    background-color: transparent;
+  }
+
+  .menu-links a {
+    color: #000; /* Black text */
+    text-decoration: none; /* Removes the default underline */
+    background-image: none; /* No gradient background */
+    -webkit-background-clip: initial; /* Resetting the background clip for Webkit browsers */
+    background-clip: initial;
+  }
+
+  .menu-links a:hover {
+    text-decoration: underline; /* Underline on hover for a clear feedback */
+  }
+
+  .menu-links {
+    background-color: transparent;
+  }
+
+  .menu-links a {
+    background-image: linear-gradient(
+      90deg,
+      #551a8b,
+      #a020f0
+    ); /* Black Panther themed gradient for text */
+    color: transparent; /* Making the color transparent to reveal the gradient */
+    -webkit-background-clip: text; /* This clips the background to the text for Webkit browsers */
+    background-clip: text;
+  }
+
+  .menu-links a:hover {
+    text-decoration: underline; /* Underline on hover for feedback in dark mode */
   }
 
   .experience-details-container {
     margin-left: -20px; /* Adjust this value as needed. */
-}
-
+  }
 }
