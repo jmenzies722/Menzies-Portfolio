@@ -31,10 +31,12 @@ function toggleMenu() {
 document.getElementById('darkModeToggle').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
 
-  // Toggle the button content based on the current mode
-  if (document.body.classList.contains('dark-mode')) {
-      this.textContent = '☀️';
-  } else {
-      this.textContent = '🌙';
-  }
+  document.getElementById('darkModeToggle').addEventListener('click', function() {
+    if (document.body.classList.contains('dark-mode')) {
+        document.body.classList.remove('dark-mode');
+    } else {
+        document.body.classList.add('dark-mode');
+    }
+});
+
 });

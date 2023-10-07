@@ -390,7 +390,7 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
   margin-top: 7%;
-  
+
 }
 
 /* CONTACT */
@@ -510,6 +510,35 @@ body.dark-mode h1,
 body.dark-mode h2, 
 body.dark-mode h3 {
   color: #FFFFFF; /* Making all text elements white */
+}
+
+.toggle-switch {
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  position: relative;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-switch .circle {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+}
+
+.dark-mode .toggle-switch {
+  background-color: #333;
+}
+
+.dark-mode .toggle-switch .circle {
+  left: 31px;
 }
 
 /* ... add more specific styles for other components for dark mode ... */
