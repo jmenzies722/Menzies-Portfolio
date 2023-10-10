@@ -322,7 +322,13 @@ body.dark-mode .panther-border {
 #about {
   position: relative;
 }
-
+body.dark-mode .about-section h3 {
+  background: linear-gradient(90deg, #551A8B, #A020F0); /* Gradient from dark purple to vibrant purple */
+  color: transparent; /* Making the color transparent to reveal the gradient */
+  -webkit-background-clip: text; /* This clips the background to the text for Webkit browsers */
+  background-clip: text;
+  text-decoration: none; /* Removing the underline from links */
+}
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -368,64 +374,70 @@ body.dark-mode .panther-border {
 
 /* EXPERIENCE SECTION */
 
+/* Added and Enhanced CSS for the Experience Section */
+
 #experience {
-  padding: 50px 0;  /* Top and bottom padding */
+  background-color: #f7f7f7; /* Slightly off-white background for better readability */
+  border-radius: 15px; /* Rounded corners to match the rest of your UI */
+  overflow: hidden; /* Ensures child elements don't overlap the rounded corners */
+  padding: 4rem 1rem; /* Generous padding for better spacing */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Subtle box shadow for depth */
+  margin-top: 25rem;
+}
+
+
+body.dark-mode #experience {
+  background-color: #2e2e2e; /* Dark background for dark mode */
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
   margin-bottom: 2rem;
-}
-
-.section__text__p1 {
-  font-size: 1.3em;  
-  font-weight: 500;  
-  color: #666;  
-  text-align: center;  
-  margin-bottom: 10px;  
-}
-
-
-.experience-details-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.experience-sub-title {
-  text-transform: uppercase; 
-  letter-spacing: 2px;  /* spaced-out letters for stylistic appeal */
-  margin-bottom: 30px;  /* More margin to space out from content below */
-  border-bottom: 2px solid #eee;  /* A subtle bottom border for separation */
+  border-bottom: 3px solid #bb86fc; /* Adding a vibrant purple underline for emphasis */
   padding-bottom: 10px;
 }
 
+body.dark-mode .experience-sub-title {
+  border-color: #551a8b; /* Darker purple for dark mode */
+}
 
 .article-container {
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: space-around;
+  gap: 50rem; /* Increased gap for better separation */
 }
 
 article {
-  transition: transform 0.3s;  /* Smooth transition for hover effects */
+  border: 1px solid #5808ba; /* Subtle border for definition */
+  border-radius: 8px; /* Consistent rounded corners for aesthetics */
+  padding: 1rem 1.5rem; /* Increased padding for a balanced look */
+  transition: transform 0.2s, box-shadow 0.2s; /* Transition effects for smoother animations */
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for elevation */
+  position: relative; /* This allows us to use z-index for stacking order during hover */
+  margin-top: 2rem;
+}
+
+article:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth perception on hover */
+  z-index: 1; /* Ensure the hovered card rises above others in stacking order */
+}
+
+article h3 {
+  font-weight: 450; /* Making the title a bit bolder for emphasis */
+  margin-bottom: 0.7rem; /* Space below title for visual separation */
+}
+
+body.dark-mode article {
+  background-color: #383838; /* Darker card background for dark mode */
+}
+
+article:hover {
+  transform: translateY(-8px); /* Raise the card slightly on hover */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1); /* Enhance box shadow on hover for depth */
 }
 
 
-article {
-  display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
-}
-
-article .icon {
-  cursor: default;
+section {
+  min-height: auto; /* Resetting min-height to auto */
+  height: auto;
 }
 
 /* PROJECTS SECTION */
@@ -680,4 +692,10 @@ body.dark-mode .logo {
 .fade-in-target:target {
   opacity: 1;
   transform: translateY(0);
+}
+
+.top-button {
+  display: block;
+  margin: 2rem auto;
+  cursor: pointer;
 }
