@@ -9,10 +9,26 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: #333;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--spacing-medium);
+  font-weight: 600;
+}
+
 
 html {
   scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
 }
 
 p {
@@ -24,6 +40,20 @@ p {
 a,
 .btn {
   transition: all 300ms ease;
+}
+
+.box-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+a:hover {
+  transform: translateY(-2px); /* Slightly raise the link */
 }
 
 /* DESKTOP NAV */
@@ -339,7 +369,7 @@ body.dark-mode .panther-border {
 /* EXPERIENCE SECTION */
 
 #experience {
-  position: relative;
+  padding: 50px 0;  /* Top and bottom padding */
 }
 
 .experience-sub-title {
@@ -349,20 +379,43 @@ body.dark-mode .panther-border {
   margin-bottom: 2rem;
 }
 
+.section__text__p1 {
+  font-size: 1.3em;  
+  font-weight: 500;  
+  color: #666;  
+  text-align: center;  
+  margin-bottom: 10px;  
+}
+
+
 .experience-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
+.experience-sub-title {
+  text-transform: uppercase; 
+  letter-spacing: 2px;  /* spaced-out letters for stylistic appeal */
+  margin-bottom: 30px;  /* More margin to space out from content below */
+  border-bottom: 2px solid #eee;  /* A subtle bottom border for separation */
+  padding-bottom: 10px;
+}
+
+
 .article-container {
   display: flex;
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 30px;
   justify-content: space-around;
 }
+
+article {
+  transition: transform 0.3s;  /* Smooth transition for hover effects */
+}
+
 
 article {
   display: flex;
@@ -614,4 +667,17 @@ body.dark-mode .logo {
   -webkit-background-clip: text; /* This clips the background to the text for Webkit browsers */
   background-clip: text;
   background-color: transparent; /* Ensure that the color is set to transparent so that only the background shows */
+}
+
+/* Initial state of the sections - before they are targeted */
+.fade-in-target {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* State of the sections when they are targeted */
+.fade-in-target:target {
+  opacity: 1;
+  transform: translateY(0);
 }

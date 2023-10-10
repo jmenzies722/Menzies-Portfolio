@@ -62,13 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 
-  document.querySelector('spline-viewer').addEventListener('mousedown', function(e) {
-      e.preventDefault();
-  }, { passive: false });
-
-  document.querySelector('spline-viewer').addEventListener('touchstart', function(e) {
-      e.preventDefault();
-  }, { passive: false });
 
   function toggleDarkMode() {
       if (document.body.classList.contains('dark-mode')) {
