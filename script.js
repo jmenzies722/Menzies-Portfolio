@@ -87,4 +87,12 @@ document.addEventListener("DOMContentLoaded", function() {
       menu.classList.toggle("open");
       icon.classList.toggle("open");
   }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    ScrollReveal().reveal('.animate__animated', { 
+      delay: 300, 
+      distance: '50px', 
+      origin: 'bottom' 
+    });
+});
 });
