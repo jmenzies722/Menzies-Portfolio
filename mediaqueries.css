@@ -79,6 +79,8 @@
   article {
     font-size: 1rem;
   }
+
+  
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
@@ -123,8 +125,13 @@
     font-size: 2rem;
   }
   .text-container {
-    text-align: justify;
-  }
+    text-align: left;  /* Prefer left alignment for mobile */
+    font-size: 18px;
+    margin: 0;        /* Remove margins if any */
+    padding: 0;       /* Remove paddings if any */
+    line-height: 1.5; /* Ensuring a good line-height for readability */
+    word-wrap: break-word;  /* Break words to prevent overflow */
+}
   .section__pic-container img[src="./assets/IMG_2589.jpg"] {
     width: 800%; /* Image takes full width of its container */
     max-width: 185px; /* Limits the image width to 300px */
@@ -163,10 +170,6 @@
 
   .menu-links a:hover {
     text-decoration: underline; /* Underline on hover for a clear feedback */
-  }
-
-  .text-container {
-    font-size: 15px;
   }
 
   .menu-links a {
