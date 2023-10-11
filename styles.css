@@ -75,15 +75,6 @@ nav {
   font-size: 1.5rem;
 }
 
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#darkModeToggle {
-  margin-left: 20px; /* Add spacing between the switch and the links */
-}
 
 
 a {
@@ -245,7 +236,7 @@ body.dark-mode .panther-border {
 }
 
 .section__text p {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .section__text__p1 {
@@ -360,8 +351,6 @@ body.dark-mode .about-section h3 {
   border-radius: 2rem;
 }
 
-
-
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -370,6 +359,9 @@ body.dark-mode .about-section h3 {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+}
+.text-container {
+  font-size: 18px;
 }
 
 .section-container {
@@ -710,4 +702,3 @@ body.dark-mode .logo {
   margin: 2rem auto;
   cursor: pointer;
 }
-
