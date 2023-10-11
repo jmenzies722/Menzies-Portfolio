@@ -41,6 +41,7 @@
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
+   
   }
   .about-containers {
     margin-top: 0;
@@ -107,9 +108,14 @@
   }
   .section__pic-container {
     width: auto;
-    height: 46vw;
+    height: 50vw;
     justify-content: center;
+    margin-bottom: 50px;
   }
+
+  .details-container:not(:first-child) {
+    margin-top: 5px; 
+}
   .section__text__p2 {
     font-size: 1.25rem;
   }
@@ -134,10 +140,14 @@
   }
 
   .section__pic-container img[src="./assets/FullSizeRender_Original.JPG"] {
-    width: 80%; /* Sets the image width directly to 90% of its container */
-    height: 200px; /* Ensures the image maintains its aspect ratio */
+    width: 140%; /* Sets the image width directly to 90% of its container */
+    height: 140%; /* Ensures the image maintains its aspect ratio */
     border-radius: 10;
   }
+
+  .details-container {
+    margin-top: 80px;  /* adjust this value if necessary */
+}
 
   .menu-links {
     background-color: transparent;
@@ -153,6 +163,10 @@
 
   .menu-links a:hover {
     text-decoration: underline; /* Underline on hover for a clear feedback */
+  }
+
+  .text-container {
+    font-size: 15px;
   }
 
   .menu-links a {
@@ -172,6 +186,20 @@
   }
 
   .experience-details-container {
-    margin-left: -20px; /* Adjust this value as needed. */
+    margin-left: -5px; /* Adjust this value as needed. */
+    margin-top: 12px;
   }
+  .experience-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* This will stack the project containers vertically */
+    padding: 0 70px; /* Add some horizontal padding to ensure content doesn't touch the screen edges */
+}
+
+.details-container.color-container {
+    width: 100%; /* Ensure project containers take the full width of their parent */
+    max-width: 90%; /* You can adjust this as needed, but it ensures the containers don't span the full width of the screen, providing some breathing space */
+    margin: 20px 0; /* Add some vertical spacing between each project */
+}
 }
