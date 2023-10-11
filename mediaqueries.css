@@ -155,9 +155,29 @@
     text-decoration: underline; /* Underline on hover for a clear feedback */
   }
 
-  .menu-links {
-    background-color: transparent;
+  .menu-links a:active {
+    background-color: rgba(0, 0, 0, 0.1); /* Adds a slight shade when link is pressed */
   }
+
+ 
+  .menu-links {
+    padding-top: 5px; /* Add some spacing on top of the first link */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Add a slight border on top to separate links from the top bar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content (useful for dark mode toggle) */
+  }
+
+  .menu-links li {
+    /* Vertical padding to make each link easier to tap */
+    text-align: center; /* Center the links text */
+    font-size: 1.2rem; /* Increase font size for clarity */
+  }
+
+  #darkModeToggle {
+    margin: 5px 0; /* Some margin to separate it from the links */
+  }
+
 
   .menu-links a {
     background-image: linear-gradient(
@@ -168,6 +188,7 @@
     color: transparent; /* Making the color transparent to reveal the gradient */
     -webkit-background-clip: text; /* This clips the background to the text for Webkit browsers */
     background-clip: text;
+    font-size: 12px;
   }
 
   .menu-links a:hover {
@@ -177,4 +198,14 @@
   .experience-details-container {
     margin-left: -20px; /* Adjust this value as needed. */
   }
+  #darkModeToggle {
+    width: 40px; /* Adjust based on your preference */
+    height: 20px;
+  }
+
+  #darkModeToggle .circle {
+    width: 20px;
+    height: 20px;
+  }
 }
+

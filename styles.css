@@ -75,6 +75,17 @@ nav {
   font-size: 1.5rem;
 }
 
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#darkModeToggle {
+  margin-left: 20px; /* Add spacing between the switch and the links */
+}
+
+
 a {
   color: black;
   text-decoration: none;
@@ -699,3 +710,4 @@ body.dark-mode .logo {
   margin: 2rem auto;
   cursor: pointer;
 }
+
