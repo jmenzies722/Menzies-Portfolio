@@ -94,5 +94,23 @@ document.addEventListener("DOMContentLoaded", function() {
       distance: '50px', 
       origin: 'bottom' 
     });
+
+    // Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+// ScrollReveal Animations
+ScrollReveal().reveal('#about', { delay: 300, distance: '50px', origin: 'bottom' });
+ScrollReveal().reveal('#experience', { delay: 400, distance: '50px', origin: 'bottom' });
+ScrollReveal().reveal('#projects', { delay: 500, distance: '50px', origin: 'bottom' });
+ScrollReveal().reveal('#contact', { delay: 600, distance: '50px', origin
+
+});
 });
 });
