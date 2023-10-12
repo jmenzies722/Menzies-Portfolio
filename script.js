@@ -1,116 +1,131 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Check for the dark mode preference in localStorage when the page loads
-  if (localStorage.getItem('dark-mode') === 'true') {
-      document.body.classList.add('dark-mode');
+  if (localStorage.getItem("dark-mode") === "true") {
+    document.body.classList.add("dark-mode");
   } else {
-      document.body.classList.remove('dark-mode');
+    document.body.classList.remove("dark-mode");
   }
 
   // ... Your existing code for typing animation ...
-  let elements = document.querySelectorAll('.section__text__animated');
+  let elements = document.querySelectorAll(".section__text__animated");
   let delay = 0;
 
   elements.forEach((element) => {
-      let text = element.getAttribute('data-text');
-      let index = 0;
+    let text = element.getAttribute("data-text");
+    let index = 0;
 
-      setTimeout(function type() {
-          element.style.visibility = 'visible';
-          if (index < text.length) {
-              element.textContent += text.charAt(index);
-              index++;
-              setTimeout(type, 150);  // typing speed
-          } else {
-              delay = 2000;  // wait for 2 seconds before starting the next text
-          }
-      }, delay);
+    setTimeout(function type() {
+      element.style.visibility = "visible";
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 150); // typing speed
+      } else {
+        delay = 2000; // wait for 2 seconds before starting the next text
+      }
+    }, delay);
 
-      delay += text.length * 150;  // calculate delay based on the current text length
+    delay += text.length * 150; // calculate delay based on the current text length
   });
 
   // Event listener for hamburger menu
-  document.querySelector(".hamburger-icon").addEventListener('click', toggleMenu);
+  document
+    .querySelector(".hamburger-icon")
+    .addEventListener("click", toggleMenu);
 
   let isDragging = false;
   let startX;
 
-  document.getElementById('darkModeToggle').addEventListener('mousedown', function(e) {
-      if (e.target.classList.contains('circle')) {
-          isDragging = true;
-          startX = e.clientX;
+  document
+    .getElementById("darkModeToggle")
+    .addEventListener("mousedown", function (e) {
+      if (e.target.classList.contains("circle")) {
+        isDragging = true;
+        startX = e.clientX;
       }
+    });
+
+  document.addEventListener("mousemove", function (e) {
+    if (isDragging) {
+      let movementX = e.clientX - startX;
+      if (movementX > 10) {
+        // dragged to the right
+        setDarkMode(true);
+      } else if (movementX < -10) {
+        // dragged to the left
+        setDarkMode(false);
+      }
+    }
   });
 
-  document.addEventListener('mousemove', function(e) {
-      if (isDragging) {
-          let movementX = e.clientX - startX;
-          if (movementX > 10) {  // dragged to the right
-              setDarkMode(true);
-          } else if (movementX < -10) {  // dragged to the left
-              setDarkMode(false);
-          }
+  document.addEventListener("mouseup", function (e) {
+    if (isDragging) {
+      let movementX = e.clientX - startX;
+      if (Math.abs(movementX) < 10) {
+        toggleDarkMode();
       }
+      isDragging = false;
+    }
   });
-
-  document.addEventListener('mouseup', function(e) {
-      if (isDragging) {
-          let movementX = e.clientX - startX;
-          if (Math.abs(movementX) < 10) {
-              toggleDarkMode();
-          }
-          isDragging = false;
-      }
-  });
-
 
   function toggleDarkMode() {
-      if (document.body.classList.contains('dark-mode')) {
-          setDarkMode(false);
-      } else {
-          setDarkMode(true);
-      }
+    if (document.body.classList.contains("dark-mode")) {
+      setDarkMode(false);
+    } else {
+      setDarkMode(true);
+    }
   }
 
   function setDarkMode(isDark) {
-      if (isDark) {
-          document.body.classList.add('dark-mode');
-          localStorage.setItem('dark-mode', 'true');
-      } else {
-          document.body.classList.remove('dark-mode');
-          localStorage.setItem('dark-mode', 'false');
-      }
+    if (isDark) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("dark-mode", "true");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("dark-mode", "false");
+    }
   }
 
   function toggleMenu() {
-      const menu = document.querySelector(".menu-links");
-      const icon = document.querySelector(".hamburger-icon");
-      menu.classList.toggle("open");
-      icon.classList.toggle("open");
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    menu.classList.toggle("open");
+    icon.classList.toggle("open");
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    ScrollReveal().reveal('.animate__animated', { 
-      delay: 300, 
-      distance: '50px', 
-      origin: 'bottom' 
+  document.addEventListener("DOMContentLoaded", function () {
+    ScrollReveal().reveal(".animate__animated", {
+      delay: 300,
+      distance: "50px",
+      origin: "bottom",
     });
 
     // Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
       });
+    });
+
+    // ScrollReveal Animations
+    ScrollReveal().reveal("#about", {
+      delay: 300,
+      distance: "50px",
+      origin: "bottom",
+    });
+    ScrollReveal().reveal("#experience", {
+      delay: 400,
+      distance: "50px",
+      origin: "bottom",
+    });
+    ScrollReveal().reveal("#projects", {
+      delay: 500,
+      distance: "50px",
+      origin: "bottom",
+    });
+    ScrollReveal().reveal("#contact", { delay: 600, distance: "50px", origin });
   });
-});
-
-// ScrollReveal Animations
-ScrollReveal().reveal('#about', { delay: 300, distance: '50px', origin: 'bottom' });
-ScrollReveal().reveal('#experience', { delay: 400, distance: '50px', origin: 'bottom' });
-ScrollReveal().reveal('#projects', { delay: 500, distance: '50px', origin: 'bottom' });
-ScrollReveal().reveal('#contact', { delay: 600, distance: '50px', origin
-
-});
-});
 });

@@ -13,11 +13,15 @@ body {
   color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: var(--spacing-medium);
   font-weight: 600;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -51,7 +55,6 @@ a,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 a:hover {
   transform: translateY(-2px); /* Slightly raise the link */
 }
@@ -74,8 +77,6 @@ nav {
   list-style: none;
   font-size: 1.5rem;
 }
-
-
 
 a {
   color: black;
@@ -143,7 +144,7 @@ a:hover {
   text-align: center;
   font-size: 16px;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;  /* Corrected typo from '0.3' to '0.3s' */
+  transition: all 0.3s ease-in-out; /* Corrected typo from '0.3' to '0.3s' */
 }
 
 .menu-links li {
@@ -221,35 +222,29 @@ section {
 .panther-border {
   z-index: 2;
   margin: 4px;
-  box-shadow: 0 0 0 4px black;  /* Black border for light mode */
+  box-shadow: 0 0 0 4px black; /* Black border for light mode */
 }
 
-
 body.dark-mode .panther-border {
-  box-shadow: 0 0 0 4px rgba(115, 7, 173, 0.6), 
-              0 0 15px rgba(115, 7, 173, 0.4), 
-              0 0 25px rgba(167, 2, 255, 0.3);
+  box-shadow: 0 0 0 4px rgba(115, 7, 173, 0.6), 0 0 15px rgba(115, 7, 173, 0.4),
+    0 0 25px rgba(167, 2, 255, 0.3);
   animation: pulseVibranium 3s infinite;
 }
 
-
 @keyframes pulseVibranium {
-  0%, 100% {
-    box-shadow: 0 0 0 4px rgba(115, 7, 173, 0.6), 
-                0 0 15px rgba(115, 7, 173, 0.4), 
-                0 0 25px rgba(167, 2, 255, 0.3);
-    transform: scale(1.0);
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(115, 7, 173, 0.6),
+      0 0 15px rgba(115, 7, 173, 0.4), 0 0 25px rgba(167, 2, 255, 0.3);
+    transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 0 6px rgba(115, 7, 173, 0.75), 
-                0 0 25px rgba(115, 7, 173, 0.55), 
-                0 0 35px rgba(167, 2, 255, 0.5), 
-                0 0 50px rgba(167, 2, 255, 0.7);
+    box-shadow: 0 0 0 6px rgba(115, 7, 173, 0.75),
+      0 0 25px rgba(115, 7, 173, 0.55), 0 0 35px rgba(167, 2, 255, 0.5),
+      0 0 50px rgba(167, 2, 255, 0.7);
     transform: scale(1.02);
   }
 }
-
-
 
 .section__text {
   align-self: center;
@@ -346,7 +341,11 @@ body.dark-mode .panther-border {
   position: relative;
 }
 body.dark-mode .about-section h3 {
-  background: linear-gradient(90deg, #551A8B, #A020F0); /* Gradient from dark purple to vibrant purple */
+  background: linear-gradient(
+    90deg,
+    #551a8b,
+    #a020f0
+  ); /* Gradient from dark purple to vibrant purple */
   color: transparent; /* Making the color transparent to reveal the gradient */
   -webkit-background-clip: text; /* This clips the background to the text for Webkit browsers */
   background-clip: text;
@@ -409,7 +408,6 @@ body.dark-mode .about-section h3 {
   margin-top: 25rem;
 }
 
-
 body.dark-mode #experience {
   background-color: #2e2e2e; /* Dark background for dark mode */
 }
@@ -457,7 +455,6 @@ article:hover {
   transform: translateY(-8px); /* Raise the card slightly on hover */
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1); /* Enhance box shadow on hover for depth */
 }
-
 
 section {
   min-height: auto; /* Resetting min-height to auto */
@@ -570,7 +567,11 @@ body.dark-mode {
 }
 
 body.dark-mode a {
-  background: linear-gradient(90deg, #551A8B, #A020F0); /* Gradient from dark purple to vibrant purple */
+  background: linear-gradient(
+    90deg,
+    #551a8b,
+    #a020f0
+  ); /* Gradient from dark purple to vibrant purple */
   color: transparent; /* This will make the color transparent and let the background gradient show */
   -webkit-background-clip: text; /* This will clip the background to the text */
   background-clip: text;
