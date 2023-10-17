@@ -271,12 +271,12 @@ body.dark-mode .panther-border {
 }
 
 .icon {
-  font-size: 2rem; /* Adjust size as needed */
-  transition: color 0.3s ease; /* Smooth transition for color changes */
+    font-size: 2rem; /* Adjust size as needed */
+    transition: color 0.3s ease; /* Smooth transition for color changes */
 }
 
 body.dark-mode .icon {
-  color: white; /* Color for dark mode */
+    color: white; /* Color for dark mode */
 }
 
 .section__text__p1 {
@@ -617,8 +617,6 @@ body.dark-mode a {
   text-decoration: none; /* Removing the underline from links */
 }
 
-
-
 /* Hover state for links in dark mode */
 body.dark-mode a:hover {
   color: transparent; /* Keep the color transparent to show the gradient */
@@ -765,4 +763,3 @@ body.dark-mode .logo {
   margin: 2rem auto;
   cursor: pointer;
 }
-

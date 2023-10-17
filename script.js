@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add("dark-mode");
         localStorage.setItem("dark-mode", "true");
 
-        // Set icon colors to white for dark mode
+        // Set icon colors to purple for dark mode
         icons.forEach(icon => {
-            icon.style.color = 'white';
+            icon.style.color = '#551a8b';
         });
     } else {
         document.body.classList.remove("dark-mode");
@@ -79,7 +79,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 }
-
-
-
 });

@@ -67,6 +67,7 @@
 }
 
 @media screen and (max-width: 600px) {
+
   #contact,
   footer {
     height: 40vh;
@@ -160,33 +161,30 @@
     background-color: transparent;
   }
 
-  .menu-links a {
-    color: #000; /* Black text */
-    text-decoration: none; /* Removes the default underline */
-    background-image: none; /* No gradient background */
-    -webkit-background-clip: initial; /* Resetting the background clip for Webkit browsers */
-    background-clip: initial;
-  }
 
-  .menu-links a:hover {
-    text-decoration: underline; /* Underline on hover for a clear feedback */
-  }
 
   .menu-links a {
-    background-image: linear-gradient(
-      90deg,
-      #551a8b,
-      #a020f0
-    ); /* Black Panther themed gradient for text */
-    color: transparent; /* Making the color transparent to reveal the gradient */
-    -webkit-background-clip: text; /* This clips the background to the text for Webkit browsers */
+    background-image: linear-gradient(135deg, #551a8b, #a020f0);
+    color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
-    font-size: 17px;
-  }
+    font-size: 14px;
+    font-weight: 500; /* Adjusted font weight */
+    text-decoration: none;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif; /* Set Poppins as the primary font, with a sans-serif fallback */
+    padding: 5px 15px; /* Added padding */
+    border-radius: 5px; /* Softened corners for a modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    display: inline-block; /* To apply vertical padding and transformations */
+}
 
-  .menu-links a:hover {
-    text-decoration: underline; /* Underline on hover for feedback in dark mode */
-  }
+.menu-links a:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
 
   .experience-details-container {
     margin-left: -5px; /* Adjust this value as needed. */
@@ -204,5 +202,12 @@
     width: 100%; /* Ensure project containers take the full width of their parent */
     max-width: 90%; /* You can adjust this as needed, but it ensures the containers don't span the full width of the screen, providing some breathing space */
     margin: 20px 0; /* Add some vertical spacing between each project */
+}
+
+.about-pic {
+  width: 80vw;  /* Responsive width based on viewport width */
+  height: 80vw; /* Maintain aspect ratio. You can adjust this as needed */
+  margin-top: 10px; /* Less negative margin to give space for the title */
+  margin-left: 0; /* Resetting the left margin for mobile */
 }
 }
