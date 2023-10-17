@@ -93,6 +93,19 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  animation: pulseLogo 3s infinite;
+}
+
+@keyframes pulseLogo {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
 }
 
 .logo:hover {
@@ -218,6 +231,7 @@ section {
   height: auto;
   border-radius: 50%;
   position: relative;
+  cursor: pointer; 
 }
 
 .panther-border {
@@ -254,6 +268,15 @@ body.dark-mode .panther-border {
 
 .section__text p {
   font-weight: 700;
+}
+
+.icon {
+  font-size: 2rem; /* Adjust size as needed */
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+body.dark-mode .icon {
+  color: white; /* Color for dark mode */
 }
 
 .section__text__p1 {
@@ -339,8 +362,8 @@ body.dark-mode .panther-border {
 /* ABOUT SECTION */
 
 #about {
-  position: relative;
-  margin-top: 1rem;
+  padding: 2rem 0;
+  border-radius: 20px; /* Rounded corners */
 }
 body.dark-mode .about-section h3 {
   background: linear-gradient(
@@ -354,7 +377,7 @@ body.dark-mode .about-section h3 {
   text-decoration: none; /* Removing the underline from links */
 }
 .about-containers {
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
@@ -369,12 +392,28 @@ body.dark-mode .about-section h3 {
   display: flex;
 }
 
+#about h2,
+#about h3 {
+  margin-top: 1rem;
+}
+
+#about p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
 .about-pic {
-  border-radius: 2rem;
+  margin-left: -1rem; /* Adjust this value as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Existing shadow for depth */
+  border-radius: 2rem; /* If you have this property */
+  width: 690px; /* Adjust this value as needed */
+  height: 690px; /* Adjust this value as needed */
+  margin-top: -120px;
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 2rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
@@ -382,20 +421,12 @@ body.dark-mode .about-section h3 {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
-.text-container {
-  font-size: 18px;
-}
 
 .section-container {
   gap: 4rem;
-  height: 80%;
+  height: 100%;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
 
 /* EXPERIENCE SECTION */
 
@@ -473,6 +504,12 @@ section {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  transition: transform 0.2s, box-shadow 0.2s; /* Add transition for smoother animation */
+}
+
+.color-container:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Add shadow for lift-off effect */
 }
 
 .project-img {
@@ -579,6 +616,8 @@ body.dark-mode a {
   background-clip: text;
   text-decoration: none; /* Removing the underline from links */
 }
+
+
 
 /* Hover state for links in dark mode */
 body.dark-mode a:hover {
@@ -726,3 +765,4 @@ body.dark-mode .logo {
   margin: 2rem auto;
   cursor: pointer;
 }
+

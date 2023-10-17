@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
   // Check for the dark mode preference in localStorage when the page loads
   if (localStorage.getItem("dark-mode") === "true") {
     document.body.classList.add("dark-mode");
@@ -6,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove("dark-mode");
   }
 
-  // ... Your existing code for typing animation ...
+  // Code for typing animation
   let elements = document.querySelectorAll(".section__text__animated");
   let delay = 0;
 
@@ -29,51 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Event listener for hamburger menu
-  document
-    .querySelector(".hamburger-icon")
-    .addEventListener("click", toggleMenu);
+  document.querySelector(".hamburger-icon").addEventListener("click", toggleMenu);
 
-  let isDragging = false;
-  let startX;
-
-  document
-    .getElementById("darkModeToggle")
-    .addEventListener("mousedown", function (e) {
-      if (e.target.classList.contains("circle")) {
-        isDragging = true;
-        startX = e.clientX;
-      }
-    });
-
-  document.addEventListener("mousemove", function (e) {
-    if (isDragging) {
-      let movementX = e.clientX - startX;
-      if (movementX > 10) {
-        // dragged to the right
-        setDarkMode(true);
-      } else if (movementX < -10) {
-        // dragged to the left
-        setDarkMode(false);
-      }
-    }
-  });
-
-  document.addEventListener("mouseup", function (e) {
-    if (isDragging) {
-      let movementX = e.clientX - startX;
-      if (Math.abs(movementX) < 10) {
-        toggleDarkMode();
-      }
-      isDragging = false;
-    }
-  });
+  // Toggle dark mode when profile picture is clicked
+  const profilePic = document.getElementById('darkModeToggle');
+  profilePic.addEventListener('click', toggleDarkMode);
 
   function toggleDarkMode() {
-    if (document.body.classList.contains("dark-mode")) {
-      setDarkMode(false);
-    } else {
-      setDarkMode(true);
-    }
+    let isDark = !document.body.classList.contains('dark-mode');
+    setDarkMode(isDark);
   }
 
   function setDarkMode(isDark) {
@@ -93,39 +58,28 @@ document.addEventListener("DOMContentLoaded", function () {
     icon.classList.toggle("open");
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    ScrollReveal().reveal(".animate__animated", {
-      delay: 300,
-      distance: "50px",
-      origin: "bottom",
-    });
+  function setDarkMode(isDark) {
+    const icons = document.querySelectorAll('#socials-container .icon');
 
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
+    if (isDark) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("dark-mode", "true");
+
+        // Set icon colors to white for dark mode
+        icons.forEach(icon => {
+            icon.style.color = 'white';
         });
-      });
-    });
+    } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("dark-mode", "false");
 
-    // ScrollReveal Animations
-    ScrollReveal().reveal("#about", {
-      delay: 300,
-      distance: "50px",
-      origin: "bottom",
-    });
-    ScrollReveal().reveal("#experience", {
-      delay: 400,
-      distance: "50px",
-      origin: "bottom",
-    });
-    ScrollReveal().reveal("#projects", {
-      delay: 500,
-      distance: "50px",
-      origin: "bottom",
-    });
-    ScrollReveal().reveal("#contact", { delay: 600, distance: "50px", origin });
-  });
+        // Set icon colors to black for light mode
+        icons.forEach(icon => {
+            icon.style.color = 'black';
+        });
+    }
+}
+
+
+
 });
