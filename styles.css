@@ -69,7 +69,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 15vh;
 }
 
 .nav-links {
@@ -183,10 +183,10 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+  height: 90vh;
 }
 
 .section-container {
@@ -201,6 +201,7 @@ section {
   gap: 5rem;
   height: 80vh;
   border-radius: 20%;
+  padding-top: 1vh;
 }
 
 .section__pic-container {
@@ -339,6 +340,7 @@ body.dark-mode .panther-border {
 
 #about {
   position: relative;
+  margin-top: 1rem;
 }
 body.dark-mode .about-section h3 {
   background: linear-gradient(
