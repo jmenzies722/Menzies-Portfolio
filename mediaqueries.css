@@ -163,8 +163,9 @@
 
   #experience, #projects {
     padding: 2rem 1rem; /* Adjust padding for mobile */
-    border-radius: 10px; /* Slightly reduced border radius for mobile */
+    border-radius: 30px; /* Slightly reduced border radius for mobile */
   }
+
 
   .experience-sub-title, .project-title {
     font-size: 1.5rem; /* Adjusting the size for mobile */
@@ -173,7 +174,7 @@
   }
 
   article, .color-container {
-    border-radius: 10px; /* Consistent border radius for mobile */
+    border-radius: 30px; /* Consistent border radius for mobile */
     margin: 1rem 0; /* Add vertical spacing and reset horizontal margin */
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Slightly reduced box shadow for mobile */
   }
