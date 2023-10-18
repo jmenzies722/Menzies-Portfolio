@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize dark mode from localStorage
@@ -107,8 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Add more reveal animations for other elements as required
 });
-
-
 
     // New event listeners
     const menuLinksItems = document.querySelectorAll('.menu-links a');
