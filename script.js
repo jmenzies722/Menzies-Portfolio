@@ -1,82 +1,119 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Check for the dark mode preference in localStorage when the page loads
-  if (localStorage.getItem("dark-mode") === "true") {
-    document.body.classList.add("dark-mode");
-  } else {
-    document.body.classList.remove("dark-mode");
+  // Initialize dark mode from localStorage
+  initializeDarkMode();
+
+  // Initialize the typing animation
+  initTypingAnimation();
+
+  // Attach event listeners
+  attachEventListeners();
+
+  function initializeDarkMode() {
+    if (localStorage.getItem("dark-mode") === "true") {
+      activateDarkMode(true);
+    } else {
+      activateDarkMode(false);
+    }
   }
 
-  // Code for typing animation
-  let elements = document.querySelectorAll(".section__text__animated");
-  let delay = 0;
+  function initTypingAnimation() {
+    let elements = document.querySelectorAll(".section__text__animated");
+    let delay = 0;
 
-  elements.forEach((element) => {
-    let text = element.getAttribute("data-text");
-    let index = 0;
+    elements.forEach((element) => {
+      let text = element.getAttribute("data-text");
+      let index = 0;
 
-    setTimeout(function type() {
-      element.style.visibility = "visible";
-      if (index < text.length) {
-        element.textContent += text.charAt(index);
-        index++;
-        setTimeout(type, 150); // typing speed
-      } else {
-        delay = 2000; // wait for 2 seconds before starting the next text
-      }
-    }, delay);
+      setTimeout(function type() {
+        element.style.visibility = "visible";
+        if (index < text.length) {
+          element.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, 150); // typing speed
+        } else {
+          delay = 2000; // wait for 2 seconds before starting the next text
+        }
+      }, delay);
 
-    delay += text.length * 150; // calculate delay based on the current text length
-  });
-
-  // Event listener for hamburger menu
-  document.querySelector(".hamburger-icon").addEventListener("click", toggleMenu);
-
-  // Toggle dark mode when profile picture is clicked
-  const profilePic = document.getElementById('darkModeToggle');
-  profilePic.addEventListener('click', toggleDarkMode);
-
-  function toggleDarkMode() {
-    let isDark = !document.body.classList.contains('dark-mode');
-    setDarkMode(isDark);
+      delay += text.length * 150; // calculate delay based on the current text length
+    });
   }
 
-  function setDarkMode(isDark) {
+  function attachEventListeners() {
+    const hamburgerIcon = document.querySelector(".hamburger-icon");
+    hamburgerIcon.addEventListener("click", toggleMenu);
+
+    const profilePic = document.getElementById('darkModeToggle');
+    profilePic.addEventListener('click', function() {
+      let isDark = !document.body.classList.contains('dark-mode');
+      activateDarkMode(isDark);
+    });
+  }
+
+  function activateDarkMode(isDark) {
+    const icons = document.querySelectorAll('#socials-container .icon');
+
     if (isDark) {
       document.body.classList.add("dark-mode");
       localStorage.setItem("dark-mode", "true");
+      icons.forEach(icon => icon.style.color = '#551a8b'); // purple for dark mode
     } else {
       document.body.classList.remove("dark-mode");
       localStorage.setItem("dark-mode", "false");
+      icons.forEach(icon => icon.style.color = 'black'); // black for light mode
     }
   }
 
   function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
+    const menuLinks = document.querySelector('.menu-links');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const blurOverlay = document.getElementById('blur-overlay');
+
+    menuLinks.classList.toggle('open');
+    hamburgerIcon.classList.toggle('open');
+    blurOverlay.classList.toggle('active');
   }
 
-  function setDarkMode(isDark) {
-    const icons = document.querySelectorAll('#socials-container .icon');
+  function closeMenu() {
+    const menuLinks = document.querySelector('.menu-links');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const blurOverlay = document.getElementById('blur-overlay');
+  
+    // Remove the classes
+    menuLinks.classList.remove('open');
+    hamburgerIcon.classList.remove('open');
+    blurOverlay.classList.remove('active');
+  }
 
-    if (isDark) {
-        document.body.classList.add("dark-mode");
-        localStorage.setItem("dark-mode", "true");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Apply ScrollReveal to sections and other major containers
+    ScrollReveal().reveal('section', { 
+        distance: '20px', 
+        origin: 'bottom', 
+        opacity: 0, 
+        duration: 600, 
+        reset: true 
+    });
 
-        // Set icon colors to purple for dark mode
-        icons.forEach(icon => {
-            icon.style.color = '#551a8b';
-        });
-    } else {
-        document.body.classList.remove("dark-mode");
-        localStorage.setItem("dark-mode", "false");
+    // If you want more specific animations for inner elements, you can target them as well
+    ScrollReveal().reveal('.section__text', { 
+        distance: '10px', 
+        origin: 'right', 
+        delay: 300,
+        duration: 600, 
+        reset: true 
+    });
+    
+    // Add more reveal animations for other elements as required
+});
 
-        // Set icon colors to black for light mode
-        icons.forEach(icon => {
-            icon.style.color = 'black';
-        });
-    }
-}
+
+
+    // New event listeners
+    const menuLinksItems = document.querySelectorAll('.menu-links a');
+    menuLinksItems.forEach(link => link.addEventListener('click', closeMenu));
+  
+    const blurOverlay = document.getElementById('blur-overlay');
+    blurOverlay.addEventListener('click', closeMenu);
 });

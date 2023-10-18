@@ -82,6 +82,8 @@
   }
 
   
+
+  
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
@@ -184,13 +186,13 @@
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 14px;
+    font-size: 35px;
     font-weight: 500; /* Adjusted font weight */
     text-decoration: none;
     word-wrap: break-word;
     overflow: hidden;
     font-family: 'Poppins', sans-serif; /* Set Poppins as the primary font, with a sans-serif fallback */
-    padding: 5px 15px; /* Added padding */
+    padding: 20px 15px; /* Added padding */
     border-radius: 20px; /* Softened corners for a modern look */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     display: inline-block; /* To apply vertical padding and transformations */
