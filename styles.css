@@ -11,6 +11,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   color: #333;
+  overflow-x: hidden;
 }
 
 h1,
@@ -430,105 +431,155 @@ body.dark-mode .about-section h3 {
 
 /* EXPERIENCE SECTION */
 
-/* Added and Enhanced CSS for the Experience Section */
+/* EXPERIENCE SECTION */
 
 #experience {
-  background-color: #f7f7f7; /* Slightly off-white background for better readability */
-  border-radius: 15px; /* Rounded corners to match the rest of your UI */
-  overflow: hidden; /* Ensures child elements don't overlap the rounded corners */
-  padding: 4rem 1rem; /* Generous padding for better spacing */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Subtle box shadow for depth */
+  background-color: #f9f9f9; 
+  border-radius: 20px; /* More pronounced roundness */
+  padding: 5rem 2rem; /* Adjusted padding for better horizontal space */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08); 
   margin-top: 25rem;
+  transition: box-shadow 0.3s; /* Smoother shadow transition */
 }
 
 body.dark-mode #experience {
-  background-color: #2e2e2e; /* Dark background for dark mode */
+  background-color: #2a2a2a; 
+}
+
+#experience:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover for the whole section */
 }
 
 .experience-sub-title {
-  margin-bottom: 2rem;
-  border-bottom: 3px solid #bb86fc; /* Adding a vibrant purple underline for emphasis */
-  padding-bottom: 10px;
+  font-size: 1.8rem; /* Bigger title for emphasis */
+  font-weight: 600; /* Bold weight */
+  color: #551a8b; /* Use the purple theme consistently */
+  margin-bottom: 3rem; /* Spacious separation from content below */
+  border-bottom: 2px solid #bb86fc; 
+  padding-bottom: 0.5rem;
 }
 
 body.dark-mode .experience-sub-title {
-  border-color: #551a8b; /* Darker purple for dark mode */
+  border-color: #7f1aff; 
+  color: #a020f0;
 }
 
 .article-container {
-  gap: 50rem; /* Increased gap for better separation */
+  display: flex;
+  flex-direction: column; /* Stack articles vertically */
+  gap: 3rem; /* Reduced gap to a more reasonable amount */
 }
 
 article {
-  border: 1px solid #5808ba; /* Subtle border for definition */
-  border-radius: 8px; /* Consistent rounded corners for aesthetics */
-  padding: 1rem 1.5rem; /* Increased padding for a balanced look */
-  transition: transform 0.2s, box-shadow 0.2s; /* Transition effects for smoother animations */
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for elevation */
-  position: relative; /* This allows us to use z-index for stacking order during hover */
-  margin-top: 2rem;
+  border: none; /* Removing the border to keep it clean */
+  background-color: #ffffff; /* Adding a background color to articles */
+  border-radius: 12px; 
+  padding: 2rem; /* Generous padding */
+  transition: all 0.3s; /* Consistent transition */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08); 
+  position: relative; 
 }
 
 article:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth perception on hover */
-  z-index: 1; /* Ensure the hovered card rises above others in stacking order */
+  transform: scale(1.02); /* Slight scale effect on hover for a pop feel */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12); 
 }
 
 article h3 {
-  font-weight: 450; /* Making the title a bit bolder for emphasis */
-  margin-bottom: 0.7rem; /* Space below title for visual separation */
+  font-size: 1.5rem; /* Bigger for emphasis */
+  font-weight: 600; /* Bold weight */
+  color: #2a2a2a; /* Dark color for better contrast */
+  margin-bottom: 1rem; /* Adjusted space for consistency */
 }
 
 body.dark-mode article {
-  background-color: #383838; /* Darker card background for dark mode */
+  background-color: #333; 
 }
 
-article:hover {
-  transform: translateY(-8px); /* Raise the card slightly on hover */
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1); /* Enhance box shadow on hover for depth */
+body.dark-mode article h3 {
+  color: #e6e6e6; /* Brighter title for dark mode */
 }
 
 section {
-  min-height: auto; /* Resetting min-height to auto */
+  min-height: auto; 
   height: auto;
 }
 
+
+/* PROJECTS SECTION */
 /* PROJECTS SECTION */
 
 #projects {
   position: relative;
   margin-top: 100px;
+  padding: 50px 20px; /* Consistent spacing from top and bottom */
+  background-color: #2c2b2b21; /* Light gray background for differentiation */
+  border-radius: 30px;
 }
 
+.project-description {
+  margin-top: 20px; /* Space between title and description */
+  color: #aaa; /* Lighter color for the description, contrasts well with the dark background */
+  font-size: 18px; /* Slightly smaller font size than title */
+  line-height: 2.0; /* Increased line height for better readability */
+  max-width: 300px; /* Control the width to make sure the description doesn't spread too much */
+  text-align: center; /* Centered text for aesthetics */
+  padding: 0 15px; /* Padding on the left and right to ensure text doesn't touch the edges */
+}
+
+
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-  transition: transform 0.2s, box-shadow 0.2s; /* Add transition for smoother animation */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center child elements horizontally */
+  border-radius: 30px; /* Rounded corners for modern look */
+  background: rgb(42, 40, 40); /* Clean white background */
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px; /* Consistent padding */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
 }
 
 .color-container:hover {
-  transform: scale(1.05); /* Slightly increase the size on hover */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Add shadow for lift-off effect */
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 300px;
-  height: 200px;
+  border-radius: 15px; /* Larger radius for a softer look */
+  width: 280px; /* Adjusting for a better fit */
+  height: 180px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for the image */
 }
 
 .project-title {
-  margin: 1rem;
-  color: black;
+  margin-top: 15px; /* Spacing between image and title */
+  font-weight: 600; /* Bolder text for title */
+  color: #333; /* Slightly darker text for better contrast */
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-  margin-top: 7%;
+  color: white;
+  background-color: #555; /* Darker background */
+  border: none; /* Remove border */
+  padding: 10px 20px;
+  border-radius: 25px; /* Fully rounded button for a modern look */
+  font-weight: 600; 
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 15px; /* Space between title and button */
+  cursor: pointer;
 }
 
+.project-btn:hover {
+  background-color: #333; /* Slightly darker background on hover */
+}
+
+.project-btn:active {
+  transform: scale(0.97); /* Button press effect */
+}
+
+/*
 /* CONTACT */
 
 #contact {

@@ -161,7 +161,22 @@
     background-color: transparent;
   }
 
+  #experience, #projects {
+    padding: 2rem 1rem; /* Adjust padding for mobile */
+    border-radius: 10px; /* Slightly reduced border radius for mobile */
+  }
 
+  .experience-sub-title, .project-title {
+    font-size: 1.5rem; /* Adjusting the size for mobile */
+    text-align: center; /* Centering the titles */
+    margin-top: 1rem; /* Adjust top margin for spacing */
+  }
+
+  article, .color-container {
+    border-radius: 10px; /* Consistent border radius for mobile */
+    margin: 1rem 0; /* Add vertical spacing and reset horizontal margin */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Slightly reduced box shadow for mobile */
+  }
 
   .menu-links a {
     background-image: linear-gradient(135deg, #551a8b, #a020f0);
@@ -175,7 +190,7 @@
     overflow: hidden;
     font-family: 'Poppins', sans-serif; /* Set Poppins as the primary font, with a sans-serif fallback */
     padding: 5px 15px; /* Added padding */
-    border-radius: 5px; /* Softened corners for a modern look */
+    border-radius: 20px; /* Softened corners for a modern look */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     display: inline-block; /* To apply vertical padding and transformations */
 }
@@ -211,3 +226,4 @@
   margin-left: 0; /* Resetting the left margin for mobile */
 }
 }
+
