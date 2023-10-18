@@ -316,47 +316,38 @@
       <p>Copyright &#169; 2023 Josh M. All Rights Reserved.</p>
     </footer>
     <script>
-      ScrollReveal().reveal('#profile .section__pic-container', {
-          origin: 'left',
-          distance: '50px',
-          duration: 800,
-          reset: true
-      });
+      // Ensure no horizontal scrolling
+      document.body.style.overflowX = 'hidden';
   
-      ScrollReveal().reveal('#profile .section__text', {
-          origin: 'right',
-          distance: '50px',
-          duration: 800,
-          reset: true
-      });
-  
-      ScrollReveal().reveal('#about', {
-          origin: 'right',
-          distance: '50px',
-          duration: 800,
-          reset: true
-      });
-  
-      ScrollReveal().reveal('.details-container', {
-          duration: 800,
+      // Initialize ScrollReveal
+      const sr = ScrollReveal({
           reset: true,
-          interval: 150 // sequential reveal for each experience box
+          duration: 800,
+          distance: '30px',  // reduced the distance to minimize overflow during animation
+          viewFactor: 0.1   // this will ensure the animation starts when 10% of the item is in the viewport
       });
   
-      ScrollReveal().reveal('#projects .details-container', {
-          scale: 0.9, // Start from 90% of their normal size
+      sr.reveal('#profile .section__pic-container', { origin: 'left' });
+      sr.reveal('#profile .section__text', { origin: 'right' });
+      sr.reveal('#about', { origin: 'bottom' });  // changed to bottom to ensure no horizontal movement
+  
+      sr.reveal('.details-container', {
+          origin: 'bottom', // changed to bottom for the same reason
           duration: 800,
-          reset: true,
-          interval: 150 // sequential reveal for each project
+          interval: 100 // reduced interval for a quicker sequential reveal
       });
   
-      ScrollReveal().reveal('#contact', {
-          scale: 0.9, // Start from 90% of their normal size
-          duration: 800,
-          reset: true
+      sr.reveal('#projects .details-container', {
+          scale: 0.95, // slightly reduced the scale for a subtler effect
+          origin: 'bottom', // changed to bottom for consistent vertical reveal
+          interval: 100
+      });
+  
+      sr.reveal('#contact', {
+          scale: 0.95, // slightly reduced the scale for a subtler effect
+          origin: 'bottom' // changed to bottom to ensure vertical reveal
       });
   </script>
-  
     <script src="script.js"></script>
   </body>
 </html>
