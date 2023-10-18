@@ -850,3 +850,24 @@ body.dark-mode .logo {
   margin: 2rem auto;
   cursor: pointer;
 }
+
+/* Default styles for larger screens (desktop) */
+.spotify-iframe-container {
+  width: 300px;  /* Full width */
+  margin: 20px auto;  /* Centered with 20px margin above and below */
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;  /* Adjusted aspect ratio for a larger height */
+  height: 0;
+}
+
+.spotify-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 20%;  /* Set this to 100% since the container's aspect ratio has been adjusted */
+  border: none;
+  border-radius: 12px;
+}
