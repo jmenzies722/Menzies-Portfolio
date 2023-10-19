@@ -1,5 +1,8 @@
 
+
 document.addEventListener("DOMContentLoaded", function () {
+
+  
 
   // Initialize dark mode from localStorage
   initializeDarkMode();
