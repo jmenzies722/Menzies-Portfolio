@@ -117,30 +117,7 @@ a:hover {
 
 .logo:hover {
   cursor: default;
-}
-/* HAMBURGER MENU */
-/* HAMBURGER MENU */
-
-/* Add this CSS to your stylesheet */
-#blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999;
-  backdrop-filter: blur(20px);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-#blur-overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-#hamburger-nav {
+}#hamburger-nav {
   position: relative;
   z-index: 1003;
   display: none;
@@ -211,7 +188,6 @@ a:hover {
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
 }
-
 /* SECTIONS */
 
 section {

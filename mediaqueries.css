@@ -231,10 +231,25 @@
 }
 
 
+  /* Background blur overlay */
+  #blur-overlay {
+    position: fixed;
+    top: -10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    backdrop-filter: blur(20px); /* Adjust the blur intensity as needed for mobile */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
 
-#blur-overlay {
-  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed for mobile */
-}
+  #blur-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
 
 
 .spotify-iframe-container {
