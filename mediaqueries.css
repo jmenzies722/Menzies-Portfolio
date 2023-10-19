@@ -250,3 +250,8 @@ Adjusting the iframe for mobile */
     height: 100%;
     border-radius: 12px;
 }
+
+#blur-overlay {
+  backdrop-filter: blur(20px);
+}
+
