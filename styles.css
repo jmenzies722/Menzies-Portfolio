@@ -121,14 +121,15 @@ a:hover {
 /* HAMBURGER MENU */
 /* HAMBURGER MENU */
 
+/* Add this CSS to your stylesheet */
 #blur-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  backdrop-filter: blur(20px);
   z-index: 999;
+  backdrop-filter: blur(20px);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
