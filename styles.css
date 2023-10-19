@@ -117,7 +117,11 @@ a:hover {
 
 .logo:hover {
   cursor: default;
-}#hamburger-nav {
+}
+/* HAMBURGER MENU */
+/* HAMBURGER MENU */
+
+#hamburger-nav {
   position: relative;
   z-index: 1003;
   display: none;
@@ -188,6 +192,7 @@ a:hover {
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
 }
+
 /* SECTIONS */
 
 section {
