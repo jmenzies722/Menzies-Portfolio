@@ -181,27 +181,7 @@
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Slightly reduced box shadow for mobile */
   }
 
-  .menu-links a {
-    background-image: linear-gradient(135deg, #551a8b, #a020f0);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    font-size: 35px;
-    font-weight: 500; /* Adjusted font weight */
-    text-decoration: none;
-    word-wrap: break-word;
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif; /* Set Poppins as the primary font, with a sans-serif fallback */
-    padding: 20px 15px; /* Added padding */
-    border-radius: 20px; /* Softened corners for a modern look */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    display: inline-block; /* To apply vertical padding and transformations */
-}
-
-.menu-links a:hover {
-    transform: translateY(-3px); /* Slight lift on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
+ 
 
 
   .experience-details-container {
@@ -228,46 +208,10 @@
   margin-top: 10px; /* Less negative margin to give space for the title */
   margin-left: 0; /* Resetting the left margin for mobile */
 }
+
+
 }
 
 
   /* Background blur overlay */
-  #blur-overlay {
-    position: fixed;
-    top: -50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-    backdrop-filter: blur(30px); /* Adjust the blur intensity as needed for mobile */
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-  }
 
-  #blur-overlay.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-
-
-.spotify-iframe-container {
-  position: relative;
-  padding-bottom: 13%; /* Adjust to your preferred aspect ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 85%; /* Adjust this value to make it slightly wider */
-}
-
-.spotify-iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Adjust this value for the desired height */
-  border-radius: 12px;
-}

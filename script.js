@@ -1,9 +1,4 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
-
-  
-
   // Initialize dark mode from localStorage
   initializeDarkMode();
 
@@ -53,6 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
       let isDark = !document.body.classList.contains('dark-mode');
       activateDarkMode(isDark);
     });
+
+    const menuLinks = document.querySelectorAll('.menu-links a');
+    menuLinks.forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
   }
 
   function activateDarkMode(isDark) {
@@ -72,22 +72,37 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleMenu() {
     const menuLinks = document.querySelector('.menu-links');
     const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const blurOverlay = document.getElementById('blur-overlay');
-
+    const blurOverlay = document.querySelector('.blur-overlay');
+  
     menuLinks.classList.toggle('open');
     hamburgerIcon.classList.toggle('open');
-    blurOverlay.classList.toggle('active');
+  
+    if (menuLinks.classList.contains('open')) {
+      document.body.classList.add('no-scroll'); // Disable scrolling when the menu is open
+      blurOverlay.style.pointerEvents = 'auto'; // Enable interactions with the overlay
+      blurOverlay.style.opacity = 1; // Make the overlay fully visible
+    } else {
+      document.body.classList.remove('no-scroll'); // Enable scrolling when the menu is closed
+      blurOverlay.style.pointerEvents = 'none'; // Disable interactions with the overlay
+      blurOverlay.style.opacity = 0; // Hide the overlay
+    }
   }
+  
 
   function closeMenu() {
     const menuLinks = document.querySelector('.menu-links');
     const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const blurOverlay = document.getElementById('blur-overlay');
-  
+    const blurOverlay = document.querySelector('.blur-overlay');
+
     // Remove the classes
     menuLinks.classList.remove('open');
     hamburgerIcon.classList.remove('open');
-    blurOverlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+
+    // Remove the blur overlay
+    if (blurOverlay) {
+      document.body.removeChild(blurOverlay);
+    }
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -110,12 +125,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     // Add more reveal animations for other elements as required
-});
-
-    // New event listeners
-    const menuLinksItems = document.querySelectorAll('.menu-links a');
-    menuLinksItems.forEach(link => link.addEventListener('click', closeMenu));
-  
-    const blurOverlay = document.getElementById('blur-overlay');
-    blurOverlay.addEventListener('click', closeMenu);
+  });
 });
