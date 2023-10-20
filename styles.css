@@ -427,6 +427,7 @@ body.dark-mode .about-section h3 {
 /* EXPERIENCE SECTION */
 
 /* EXPERIENCE SECTION */
+/* EXPERIENCE SECTION */
 
 #experience {
   background-color: #f9f9f9; 
@@ -438,7 +439,7 @@ body.dark-mode .about-section h3 {
 }
 
 body.dark-mode #experience {
-  background-color: #2a2a2a; 
+  background-color: #1b1b1b;
 }
 
 #experience:hover {
@@ -483,12 +484,12 @@ article:hover {
 article h3 {
   font-size: 1.5rem; /* Bigger for emphasis */
   font-weight: 600; /* Bold weight */
-  color: #2a2a2a; /* Dark color for better contrast */
+  color: #1b1b1b; /* Dark color for better contrast */
   margin-bottom: 1rem; /* Adjusted space for consistency */
 }
 
 body.dark-mode article {
-  background-color: #333; 
+  background-color: #1b1b1b; 
 }
 
 body.dark-mode article h3 {
@@ -499,7 +500,6 @@ section {
   min-height: auto; 
   height: auto;
 }
-
 
 /* PROJECTS SECTION */
 /* PROJECTS SECTION */
@@ -519,7 +519,7 @@ body.dark-mode #projects {
 }
 
 body.dark-mode .color-container {
-  background: #282828; /* Dark background for container in dark mode */
+  background: #1b1b1b; /* Dark background for container in dark mode */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Adjusted shadow for dark mode */
 }
 
@@ -532,7 +532,7 @@ body.dark-mode .project-title {
 }
 
 body.dark-mode .project-btn {
-  background-color: #444; /* Darker button background in dark mode */
+  background-color: #343333; /* Darker button background in dark mode */
   color: white; /* Text color for button in dark mode */
 }
 
