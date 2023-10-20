@@ -156,10 +156,6 @@
     margin-top: 80px;  /* adjust this value if necessary */
 }
 
-  .menu-links {
-    background-color: transparent;
-  }
-
   #experience, #projects {
     padding: 2rem 1rem; /* Adjust padding for mobile */
     border-radius: 30px; /* Slightly reduced border radius for mobile */
@@ -177,9 +173,6 @@
     margin: 1rem 0; /* Add vertical spacing and reset horizontal margin */
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Slightly reduced box shadow for mobile */
   }
-
- 
-
 
   .experience-details-container {
     margin-left: -5px; /* Adjust this value as needed. */
