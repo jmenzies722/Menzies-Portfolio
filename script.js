@@ -72,39 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleMenu() {
     const menuLinks = document.querySelector('.menu-links');
     const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const blurOverlay = document.querySelector('.blur-overlay');
+    const body = document.body;
   
     menuLinks.classList.toggle('open');
     hamburgerIcon.classList.toggle('open');
-  
-    if (menuLinks.classList.contains('open')) {
-      document.body.classList.add('no-scroll'); // Disable scrolling when the menu is open
-      blurOverlay.style.pointerEvents = 'auto'; // Enable interactions with the overlay
-      blurOverlay.style.opacity = 1; // Make the overlay fully visible
-    } else {
-      document.body.classList.remove('no-scroll'); // Enable scrolling when the menu is closed
-      blurOverlay.style.pointerEvents = 'none'; // Disable interactions with the overlay
-      blurOverlay.style.opacity = 0; // Hide the overlay
-    }
-  }
-  
-
-  function closeMenu() {
-    const menuLinks = document.querySelector('.menu-links');
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const blurOverlay = document.querySelector('.blur-overlay');
-
-    // Remove the classes
-    menuLinks.classList.remove('open');
-    hamburgerIcon.classList.remove('open');
-    document.body.classList.remove('no-scroll');
-
-    // Remove the blur overlay
-    if (blurOverlay) {
-      document.body.removeChild(blurOverlay);
-    }
+    body.classList.toggle('blur'); // Toggle the blur class on the body
   }
 
+  
   document.addEventListener("DOMContentLoaded", function () {
     // Apply ScrollReveal to sections and other major containers
     ScrollReveal().reveal('section', { 
