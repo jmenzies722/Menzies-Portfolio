@@ -841,3 +841,32 @@ body.dark-mode .logo {
   cursor: pointer;
 }
 
+/* Centering the button horizontally and vertically */
+.more-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh; /* Adjust the height as needed to center vertically */
+}
+
+.view-projects-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ebebeb;
+  color: #333;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+.view-projects-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.view-projects-button:active {
+  transform: scale(0.97);
+}
