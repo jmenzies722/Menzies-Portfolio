@@ -11,13 +11,12 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   color: #333;
-   overflow-x: hidden; /* Prevent horizontal scroll */
-    max-width: 100%; /* Ensure body doesn't expand beyond viewport */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  max-width: 100%; /* Ensure body doesn't expand beyond viewport */
 }
 
 h1,
@@ -167,8 +166,6 @@ a:hover {
   transition: color 0.3s ease-in-out;
 }
 
-
-
 .menu-links li {
   list-style: none;
 }
@@ -240,10 +237,8 @@ section {
   height: auto;
   border-radius: 50%;
   position: relative;
-  cursor: pointer; 
+  cursor: pointer;
 }
-
-
 
 .panther-border {
   z-index: 2;
@@ -282,12 +277,12 @@ body.dark-mode .panther-border {
 }
 
 .icon {
-    font-size: 2rem; /* Adjust size as needed */
-    transition: color 0.3s ease; /* Smooth transition for color changes */
+  font-size: 2rem; /* Adjust size as needed */
+  transition: color 0.3s ease; /* Smooth transition for color changes */
 }
 
 body.dark-mode .icon {
-    color: white; /* Color for dark mode */
+  color: white; /* Color for dark mode */
 }
 
 .section__text__p1 {
@@ -431,17 +426,16 @@ body.dark-mode .about-section h3 {
   height: 100%;
 }
 
-
 /* EXPERIENCE SECTION */
 
 /* EXPERIENCE SECTION */
 /* EXPERIENCE SECTION */
 
 #experience {
-  background-color: #f9f9f9; 
+  background-color: #f9f9f9;
   border-radius: 20px; /* More pronounced roundness */
   padding: 5rem 2rem; /* Adjusted padding for better horizontal space */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08); 
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
   margin-top: 25rem;
   transition: box-shadow 0.3s; /* Smoother shadow transition */
 }
@@ -459,12 +453,12 @@ body.dark-mode #experience {
   font-weight: 600; /* Bold weight */
   color: #551a8b; /* Use the purple theme consistently */
   margin-bottom: 3rem; /* Spacious separation from content below */
-  border-bottom: 2px solid #bb86fc; 
+  border-bottom: 2px solid #bb86fc;
   padding-bottom: 0.5rem;
 }
 
 body.dark-mode .experience-sub-title {
-  border-color: #7f1aff; 
+  border-color: #7f1aff;
   color: #a020f0;
 }
 
@@ -477,16 +471,16 @@ body.dark-mode .experience-sub-title {
 article {
   border: none; /* Removing the border to keep it clean */
   background-color: #ffffff; /* Adding a background color to articles */
-  border-radius: 12px; 
+  border-radius: 12px;
   padding: 2rem; /* Generous padding */
   transition: all 0.3s; /* Consistent transition */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08); 
-  position: relative; 
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
 }
 
 article:hover {
   transform: scale(1.02); /* Slight scale effect on hover for a pop feel */
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12); 
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 article h3 {
@@ -497,7 +491,7 @@ article h3 {
 }
 
 body.dark-mode article {
-  background-color: #1b1b1b; 
+  background-color: #1b1b1b;
 }
 
 body.dark-mode article h3 {
@@ -505,7 +499,7 @@ body.dark-mode article h3 {
 }
 
 section {
-  min-height: auto; 
+  min-height: auto;
   height: auto;
 }
 
@@ -548,20 +542,17 @@ body.dark-mode .project-btn:hover {
   background-color: #333; /* Darker shade on hover for dark mode */
 }
 
-
 body.dark-mode .project-description {
   color: #ddd; /* Brighter gray text for the description in dark mode for better contrast */
   border-radius: 10px; /* Optional: Add border-radius for consistency */
   padding: 15px; /* Padding for better spacing in dark mode */
 }
 
-
-
 .project-description {
   margin-top: 20px;
   color: #555; /* Darker color for better readability in light mode */
   font-size: 18px;
-  line-height: 2.0;
+  line-height: 2;
   max-width: 300px;
   text-align: center;
   padding: 0 15px;
@@ -575,7 +566,7 @@ body.dark-mode .project-description {
   background: #fff; /* Clean white background for light mode */
   transition: transform 0.3s, box-shadow 0.3s;
   padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .color-container:hover {
@@ -594,7 +585,7 @@ body.dark-mode .project-description {
 .project-title {
   margin-top: 15px;
   font-weight: 600;
-  color: #333; 
+  color: #333;
 }
 
 .project-btn {
@@ -603,7 +594,7 @@ body.dark-mode .project-description {
   border: none;
   padding: 10px 20px;
   border-radius: 25px;
-  font-weight: 600; 
+  font-weight: 600;
   text-transform: uppercase;
   transition: background-color 0.3s, transform 0.2s;
   margin-top: 15px;
